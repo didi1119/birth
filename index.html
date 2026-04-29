@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>birth × AI｜先聊聊你和 AI 的距離</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F5EFE6;
+    --bg-card: #FBF7F0;
+    --ink: #2B2A26;
+    --ink-soft: #6B6A63;
+    --line: #E5DCCB;
+    --accent: #C26A4A;
+    --accent-deep: #9C4D32;
+    --accent-soft: #F2E0D4;
+    --leaf: #4A5D43;
+    --gold: #B89968;
+    --shadow: 0 6px 24px rgba(60, 40, 20, 0.06);
+    --shadow-lg: 0 18px 48px rgba(60, 40, 20, 0.10);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Noto Sans TC', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(194,106,74,0.06), transparent 40%),
+      radial-gradient(circle at 85% 80%, rgba(74,93,67,0.05), transparent 40%);
+  }
+
+  .serif { font-family: 'Noto Serif TC', 'Cormorant Garamond', serif; }
+
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 120px; }
+
+  /* ---------- Top progress ---------- */
+  .progress-bar {
+    position: fixed; top: 0; left: 0; right: 0; height: 3px;
+    background: rgba(194,106,74,0.12); z-index: 50;
+  }
+  .progress-fill {
+    height: 100%; width: 0%;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+    transition: width 0.4s cubic-bezier(.2,.8,.2,1);
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    text-align: center;
+    padding: 32px 0 56px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 64px;
+  }
+  .brand-mark {
+    display: inline-flex; align-items: center; gap: 12px;
+    color: var(--ink-soft); font-size: 13px; letter-spacing: 0.3em;
+    text-transform: uppercase; margin-bottom: 28px;
+  }
+  .brand-mark .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .hero h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 500;
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.35;
+    margin: 0 0 18px;
+  }
+  .hero h1 em {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--accent);
+    font-size: 1.05em;
+  }
+  .hero .lede { color: var(--ink-soft); font-size: 15px; max-width: 520px; margin: 0 auto; line-height: 1.85; }
+  .hero .meta { margin-top: 28px; display: inline-flex; gap: 22px; flex-wrap: wrap; justify-content: center; color: var(--ink-soft); font-size: 13px; }
+  .hero .meta span { display: inline-flex; align-items: center; gap: 6px; }
+  .hero .meta svg { width: 14px; height: 14px; opacity: 0.7; }
+
+  /* ---------- Sections ---------- */
+  section.block {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 40px 36px;
+    margin-bottom: 24px;
+    box-shadow: var(--shadow);
+    transition: box-shadow 0.3s;
+  }
+  section.block:focus-within { box-shadow: var(--shadow-lg); }
+
+  .section-head { display: flex; align-items: baseline; gap: 18px; margin-bottom: 8px; }
+  .section-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 32px;
+    color: var(--accent);
+    line-height: 1; flex-shrink: 0;
+  }
+  .section-title { font-family: 'Noto Serif TC', serif; font-size: 22px; font-weight: 500; margin: 0; }
+  .section-sub {
+    color: var(--ink-soft); font-size: 14px;
+    margin: 4px 0 32px 50px;
+    border-left: 2px solid var(--accent-soft);
+    padding-left: 14px;
+  }
+
+  /* ---------- Question ---------- */
+  .q { margin-bottom: 32px; }
+  .q:last-child { margin-bottom: 0; }
+  .q-label { display: block; font-weight: 500; font-size: 15.5px; margin-bottom: 12px; }
+  .q-label .num {
+    color: var(--accent); font-family: 'Cormorant Garamond', serif;
+    font-style: italic; font-weight: 500; margin-right: 8px; font-size: 17px;
+  }
+  .q-hint { display: block; color: var(--ink-soft); font-size: 13px; margin: -6px 0 14px 0; font-weight: 300; }
+
+  /* ---------- Radio / Checkbox ---------- */
+  .options { display: flex; flex-direction: column; gap: 8px; }
+  .options.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  @media (max-width: 540px) { .options.grid-2 { grid-template-columns: 1fr; } }
+  .opt {
+    display: flex; align-items: center; gap: 12px;
+    padding: 12px 16px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14.5px;
+  }
+  .opt:hover { border-color: var(--accent); background: var(--accent-soft); transform: translateX(2px); }
+  .opt input { display: none; }
+  .opt .box {
+    width: 18px; height: 18px;
+    border: 1.5px solid var(--ink-soft);
+    border-radius: 50%;
+    flex-shrink: 0; position: relative;
+    transition: all 0.2s;
+  }
+  .opt.check .box { border-radius: 5px; }
+  .opt input:checked ~ .box { border-color: var(--accent); background: var(--accent); }
+  .opt input:checked ~ .box::after {
+    content: ''; position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px; height: 8px; background: #fff; border-radius: 50%;
+  }
+  .opt.check input:checked ~ .box::after {
+    width: 5px; height: 9px; background: transparent;
+    border: solid #fff; border-width: 0 2px 2px 0;
+    transform: translate(-50%, -60%) rotate(45deg);
+    border-radius: 0;
+  }
+  .opt input:checked ~ .lbl { color: var(--accent-deep); font-weight: 500; }
+  .opt:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+
+  /* ---------- Text inputs ---------- */
+  .text-input, textarea.text-input {
+    width: 100%;
+    padding: 14px 16px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14.5px;
+    color: var(--ink);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    resize: vertical;
+  }
+  textarea.text-input { min-height: 88px; line-height: 1.7; }
+  textarea.text-input.large { min-height: 160px; }
+  .text-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(194,106,74,0.12);
+  }
+  .text-input::placeholder { color: #B5AC9D; }
+
+  /* ---------- Level cards (6 levels) ---------- */
+  .level-list { display: flex; flex-direction: column; gap: 8px; }
+  .level-card {
+    display: flex; align-items: center; gap: 18px;
+    padding: 14px 20px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .level-card:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+    transform: translateX(2px);
+  }
+  .level-card input { display: none; }
+  .lv-tag {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    flex-shrink: 0;
+    min-width: 52px;
+    border-right: 1px solid var(--line);
+    padding-right: 16px;
+    text-align: center;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .lv-content { flex: 1; }
+  .lv-title { font-weight: 500; font-size: 14.5px; color: var(--ink); margin-bottom: 2px; }
+  .lv-desc { font-size: 12.5px; color: var(--ink-soft); line-height: 1.55; }
+  .level-card:has(input:checked) {
+    background: var(--accent);
+    border-color: var(--accent);
+    box-shadow: 0 4px 14px rgba(194,106,74,0.28);
+    transform: translateX(2px);
+  }
+  .level-card:has(input:checked) .lv-tag,
+  .level-card:has(input:checked) .lv-title,
+  .level-card:has(input:checked) .lv-desc { color: #fff; }
+  .level-card:has(input:checked) .lv-tag { border-right-color: rgba(255,255,255,0.35); }
+
+  /* ---------- "其他" reveal text ---------- */
+  .other-text {
+    display: none;
+    margin-top: 10px;
+    animation: fadeSlide 0.25s ease-out;
+  }
+  .other-text.show { display: block; }
+  @keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ---------- Section divider ---------- */
+  .section-divider {
+    text-align: center;
+    margin: 8px 0 24px;
+    color: var(--ink-soft);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+  }
+  .section-divider::before, .section-divider::after {
+    content: '— —'; color: var(--gold); margin: 0 14px;
+  }
+
+  /* ---------- Submit ---------- */
+  .submit-block {
+    text-align: center;
+    margin-top: 48px;
+    padding: 48px 32px;
+    background: linear-gradient(135deg, var(--accent-soft) 0%, var(--bg-card) 100%);
+    border-radius: 18px;
+    border: 1px solid var(--line);
+  }
+  .submit-block .closer { font-family: 'Noto Serif TC', serif; font-size: 20px; margin: 0 0 8px; }
+  .submit-block .closer-sub { color: var(--ink-soft); font-size: 14px; margin-bottom: 28px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 16px 40px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 6px 18px rgba(194,106,74,0.3);
+  }
+  .btn:hover {
+    background: var(--accent-deep);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(194,106,74,0.4);
+  }
+  .btn:disabled { opacity: 0.6; cursor: wait; transform: none; }
+  .btn-secondary { background: transparent; color: var(--accent-deep); border: 1.5px solid var(--accent); box-shadow: none; }
+  .btn-secondary:hover { background: var(--accent); color: #fff; }
+
+  /* ---------- Result modal ---------- */
+  .result-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(43, 42, 38, 0.55);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+    align-items: center; justify-content: center;
+    padding: 24px;
+    animation: fadeIn 0.4s;
+  }
+  .result-overlay.show { display: flex; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .result-card {
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 48px 40px;
+    max-width: 560px; width: 100%;
+    text-align: center;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+    max-height: 90vh; overflow-y: auto;
+    animation: slideUp 0.5s cubic-bezier(.2,.8,.2,1);
+  }
+  @keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .result-card .icon {
+    width: 64px; height: 64px;
+    margin: 0 auto 20px;
+    background: var(--accent-soft);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 32px;
+  }
+  .result-card h2 { font-family: 'Noto Serif TC', serif; font-weight: 500; font-size: 26px; margin: 0 0 12px; }
+  .result-card p { color: var(--ink-soft); font-size: 14.5px; line-height: 1.8; margin: 0 0 28px; }
+  .result-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .copy-toast { margin-top: 16px; color: var(--leaf); font-size: 13px; opacity: 0; transition: opacity 0.3s; }
+  .copy-toast.show { opacity: 1; }
+
+  /* ---------- Footer ---------- */
+  .footer { text-align: center; margin-top: 64px; color: var(--ink-soft); font-size: 12px; letter-spacing: 0.15em; }
+
+  /* ---------- Animations ---------- */
+  section.block { opacity: 0; transform: translateY(16px); animation: fadeUp 0.6s forwards; }
+  section.block:nth-of-type(1) { animation-delay: 0.05s; }
+  section.block:nth-of-type(2) { animation-delay: 0.12s; }
+  section.block:nth-of-type(3) { animation-delay: 0.19s; }
+  section.block:nth-of-type(4) { animation-delay: 0.26s; }
+  section.block:nth-of-type(5) { animation-delay: 0.33s; }
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+<div class="wrap">
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="brand-mark"><span class="dot"></span><span>birth × AI 內訓問卷</span><span class="dot"></span></div>
+    <h1>嘿，在開始上課之前——<br>想先聽聽<em>你</em>的真心話</h1>
+    <p class="lede">
+      這份問卷不會打分數、不會記名、不會被檢討。<br>
+      只是想知道你目前怎麼用 AI、工作中最痛的是哪些事，<br>
+      讓接下來的課程真的能幫到你，而不是浪費你下班的時間。
+    </p>
+    <div class="meta">
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        約 5 分鐘
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M5 8h14M5 16h14"/></svg>
+        全程匿名
+      </span>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        隨便寫，沒有對錯
+      </span>
+    </div>
+  </header>
+
+  <form id="surveyForm">
+
+  <!-- ============ SECTION 1 ============ -->
+  <section class="block">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <h2 class="section-title">關於你</h2>
+    </div>
+    <p class="section-sub">不會問你叫什麼，但這幾題能幫我們了解團隊組成。</p>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q1.</span>你目前在 birth 的角色是？</label>
+      <div class="options grid-2">
+        <label class="opt"><input type="radio" name="q1" value="門市/外場服務"><span class="box"></span><span class="lbl">門市／外場服務</span></label>
+        <label class="opt"><input type="radio" name="q1" value="廚房/內場"><span class="box"></span><span class="lbl">廚房／內場</span></label>
+        <label class="opt"><input type="radio" name="q1" value="行銷/社群小編"><span class="box"></span><span class="lbl">行銷／社群小編</span></label>
+        <label class="opt"><input type="radio" name="q1" value="行政/管理"><span class="box"></span><span class="lbl">行政／管理層</span></label>
+        <label class="opt"><input type="radio" name="q1" value="其他"><span class="box"></span><span class="lbl">其他（請寫下）</span></label>
+      </div>
+      <input type="text" class="text-input other-text" name="q1_other" id="q1_other" placeholder="例如：跨店支援、品牌主理人、攝影、外送⋯⋯">
+    </div>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q2.</span>你的年齡區間？<span class="q-hint">這題是想了解學習風格，不會用來比較。</span></label>
+      <div class="options grid-2">
+        <label class="opt"><input type="radio" name="q2" value="<25"><span class="box"></span><span class="lbl">25 歲以下</span></label>
+        <label class="opt"><input type="radio" name="q2" value="25-30"><span class="box"></span><span class="lbl">25 ~ 30 歲</span></label>
+        <label class="opt"><input type="radio" name="q2" value="31-40"><span class="box"></span><span class="lbl">31 ~ 40 歲</span></label>
+        <label class="opt"><input type="radio" name="q2" value="40+"><span class="box"></span><span class="lbl">41 歲以上</span></label>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider">your distance from AI</div>
+
+  <!-- ============ SECTION 2 ============ -->
+  <section class="block">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <h2 class="section-title">你和 AI 的距離</h2>
+    </div>
+    <p class="section-sub">先別擔心答錯，誠實寫就好——這是設計課程的關鍵。</p>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q3.</span>過去一個月，你實際拿 AI 來做過哪些事？<span class="q-hint">可複選。沒做過也完全沒關係，這就是來上課的原因。</span></label>
+      <div class="options grid-2">
+        <label class="opt check"><input type="checkbox" name="q3" value="寫文案/想標題"><span class="box"></span><span class="lbl">寫文案 / 想標題</span></label>
+        <label class="opt check"><input type="checkbox" name="q3" value="翻譯"><span class="box"></span><span class="lbl">翻譯（中英／中日⋯⋯）</span></label>
+        <label class="opt check"><input type="checkbox" name="q3" value="整理筆記/摘要"><span class="box"></span><span class="lbl">整理筆記 / 摘要長文</span></label>
+        <label class="opt check"><input type="checkbox" name="q3" value="找資料/查詢"><span class="box"></span><span class="lbl">找資料 / 查詢</span></label>
+        <label class="opt check"><input type="checkbox" name="q3" value="想點子/腦力激盪"><span class="box"></span><span class="lbl">想點子 / 腦力激盪</span></label>
+        <label class="opt check"><input type="checkbox" name="q3" value="做圖/設計"><span class="box"></span><span class="lbl">做圖 / 做設計</span></label>
+        <label class="opt check"><input type="checkbox" name="q3" value="寫訊息/客服回覆"><span class="box"></span><span class="lbl">寫訊息 / 客服回覆</span></label>
+        <label class="opt check"><input type="checkbox" name="q3" value="學新東西"><span class="box"></span><span class="lbl">學新東西 / 自我進修</span></label>
+        <label class="opt check"><input type="checkbox" name="q3" value="個人聊天/解悶"><span class="box"></span><span class="lbl">個人聊天 / 解悶</span></label>
+        <label class="opt check"><input type="checkbox" name="q3" value="完全沒用過"><span class="box"></span><span class="lbl">還沒用過 AI</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q4.</span>下面這些 AI 工具，你聽過或用過哪些？<span class="q-hint">可複選。沒聽過完全沒關係。</span></label>
+      <div class="options grid-2">
+        <label class="opt check"><input type="checkbox" name="q4" value="ChatGPT"><span class="box"></span><span class="lbl">ChatGPT</span></label>
+        <label class="opt check"><input type="checkbox" name="q4" value="Claude"><span class="box"></span><span class="lbl">Claude</span></label>
+        <label class="opt check"><input type="checkbox" name="q4" value="Gemini"><span class="box"></span><span class="lbl">Gemini（Google）</span></label>
+        <label class="opt check"><input type="checkbox" name="q4" value="Midjourney"><span class="box"></span><span class="lbl">Midjourney（畫圖）</span></label>
+        <label class="opt check"><input type="checkbox" name="q4" value="Canva AI"><span class="box"></span><span class="lbl">Canva 的 AI 功能</span></label>
+        <label class="opt check"><input type="checkbox" name="q4" value="CapCut/剪映"><span class="box"></span><span class="lbl">CapCut／剪映 AI 剪輯</span></label>
+        <label class="opt check"><input type="checkbox" name="q4" value="Notion AI"><span class="box"></span><span class="lbl">Notion AI</span></label>
+        <label class="opt check"><input type="checkbox" name="q4" value="都沒聽過"><span class="box"></span><span class="lbl">以上都沒聽過</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q5.</span>過去一個月，你實際打開來用過幾次 AI 工具？</label>
+      <div class="options">
+        <label class="opt"><input type="radio" name="q5" value="daily"><span class="box"></span><span class="lbl">幾乎每天用</span></label>
+        <label class="opt"><input type="radio" name="q5" value="weekly"><span class="box"></span><span class="lbl">每週用幾次</span></label>
+        <label class="opt"><input type="radio" name="q5" value="rarely"><span class="box"></span><span class="lbl">偶爾，想到才用</span></label>
+        <label class="opt"><input type="radio" name="q5" value="seen"><span class="box"></span><span class="lbl">看過別人用，自己沒試過</span></label>
+        <label class="opt"><input type="radio" name="q5" value="never"><span class="box"></span><span class="lbl">完全沒用過</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q6.</span>用過 AI 的話──具體聊聊你怎麼用、用得順不順？<span class="q-hint">這題很重要，越詳細越好！可以寫：用什麼工具、做什麼事、有沒有覺得卡關、答出來實不實用、為什麼後來不用了⋯⋯。完全沒用過寫「沒用過」就好。</span></label>
+      <textarea class="text-input large" name="q6" placeholder="例如：&#10;・我用 ChatGPT 想 IG 標題，但常常太文青不像 birth 的口吻，要改很多次&#10;・想用 Canva AI 做主視覺，但不知道怎麼下指令，弄很久&#10;・用 ChatGPT 翻英文菜單，超方便，現在每週固定用&#10;・試過一次覺得答得很爛就再也沒打開過⋯⋯"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q7.</span>對 AI 的熟練度，你目前在哪一級？<span class="q-hint">誠實選最貼近的——這對課程設計超關鍵。</span></label>
+      <div class="level-list">
+        <label class="level-card"><input type="radio" name="q7" value="Lv0｜完全反感"><span class="lv-tag">Lv 0</span><div class="lv-content"><div class="lv-title">完全反感</div><div class="lv-desc">不想碰、覺得 AI 跟我沒關係、甚至有點討厭</div></div></label>
+        <label class="level-card"><input type="radio" name="q7" value="Lv1｜完全陌生"><span class="lv-tag">Lv 1</span><div class="lv-content"><div class="lv-title">完全陌生</div><div class="lv-desc">聽過 AI 這個詞，但不知道是什麼、也沒打開過任何工具</div></div></label>
+        <label class="level-card"><input type="radio" name="q7" value="Lv2｜用過但卡卡"><span class="lv-tag">Lv 2</span><div class="lv-content"><div class="lv-title">用過但卡卡</div><div class="lv-desc">打開試過，但常覺得 AI 答得很爛、不太會問問題、用沒幾次就放棄</div></div></label>
+        <label class="level-card"><input type="radio" name="q7" value="Lv3｜會用來辦小事"><span class="lv-tag">Lv 3</span><div class="lv-content"><div class="lv-title">會用來辦小事</div><div class="lv-desc">會用 AI 寫文案、想點子、查資料、處理一些日常雜事</div></div></label>
+        <label class="level-card"><input type="radio" name="q7" value="Lv4｜融入工作流程"><span class="lv-tag">Lv 4</span><div class="lv-content"><div class="lv-title">融入工作流程</div><div class="lv-desc">已經把 AI 排進每天工作中，知道哪些事丟給 AI 比自己做快</div></div></label>
+        <label class="level-card"><input type="radio" name="q7" value="Lv5｜建自動化系統"><span class="lv-tag">Lv 5</span><div class="lv-content"><div class="lv-title">建自動化系統</div><div class="lv-desc">會串工具、設計流程，讓 AI 自己跑，甚至能教別人用</div></div></label>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider">your daily work</div>
+
+  <!-- ============ SECTION 3 ============ -->
+  <section class="block">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <h2 class="section-title">你的工作日常</h2>
+    </div>
+    <p class="section-sub">越具體越好，這些痛點正是 AI 最有機會幫你解掉的地方。</p>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q8.</span>工作中你「最常做」的事情是什麼？<span class="q-hint">三件以內，可以是大事也可以是小事。</span></label>
+      <textarea class="text-input" name="q8" placeholder="例如：1. 招呼客人、結帳　2. 拍照發 IG 限動　3. 點貨、盤點"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q9.</span>有哪些事情讓你覺得「重複又麻煩，每次都浪費時間」？</label>
+      <textarea class="text-input" name="q9" placeholder="例如：每天都要回客人重複的問題（營業時間、地址、有沒有素食）；每週寫貼文很卡；做交班報告好花時間"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q10.</span>有哪些事，你會偷偷想「要是有人可以幫我做就好了」？<span class="q-hint">不用害羞，誠實寫——這才是 AI 該登場的時候。</span></label>
+      <textarea class="text-input" name="q10" placeholder="例如：想新菜的命名和文案；翻譯英日文菜單；幫我看員工排班；把語音備忘錄整理成備料清單"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q11.</span>你工作中最常用的工具是？<span class="q-hint">可複選</span></label>
+      <div class="options grid-2">
+        <label class="opt check"><input type="checkbox" name="q11" value="LINE"><span class="box"></span><span class="lbl">LINE 群組</span></label>
+        <label class="opt check"><input type="checkbox" name="q11" value="IG"><span class="box"></span><span class="lbl">Instagram</span></label>
+        <label class="opt check"><input type="checkbox" name="q11" value="Excel"><span class="box"></span><span class="lbl">Excel／Google 試算表</span></label>
+        <label class="opt check"><input type="checkbox" name="q11" value="POS"><span class="box"></span><span class="lbl">POS 點餐／結帳系統</span></label>
+        <label class="opt check"><input type="checkbox" name="q11" value="Canva"><span class="box"></span><span class="lbl">Canva</span></label>
+        <label class="opt check"><input type="checkbox" name="q11" value="紙筆"><span class="box"></span><span class="lbl">紙本筆記／白板</span></label>
+        <label class="opt check"><input type="checkbox" name="q11" value="Notion/Google Docs"><span class="box"></span><span class="lbl">Notion／Google Docs</span></label>
+        <label class="opt check"><input type="checkbox" name="q11" value="排班App"><span class="box"></span><span class="lbl">排班／打卡 App</span></label>
+        <label class="opt check"><input type="checkbox" name="q11" value="iChef/POS+"><span class="box"></span><span class="lbl">iChef / 其他 POS+</span></label>
+        <label class="opt check"><input type="checkbox" name="q11" value="其他"><span class="box"></span><span class="lbl">其他（請寫下）</span></label>
+      </div>
+      <input type="text" class="text-input other-text" name="q11_other" id="q11_other" placeholder="例如：訂位系統、設計軟體、外送平台後台⋯⋯">
+    </div>
+  </section>
+
+  <div class="section-divider">hopes &amp; worries</div>
+
+  <!-- ============ SECTION 4 ============ -->
+  <section class="block">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <h2 class="section-title">你的期待與擔心</h2>
+    </div>
+    <p class="section-sub">兩邊都重要——擔心的事如果沒先講開，學起來會卡卡的。</p>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q12.</span>如果 AI 可以幫你做一件事，你最希望是什麼？<span class="q-hint">寫得越具體越好。</span></label>
+      <textarea class="text-input" name="q12" placeholder="例如：幫我把今天客人的回饋整理成下週開會的重點；或幫我每週生 7 篇 IG 貼文草稿"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q13.</span>對於 AI 進到你的工作，你有什麼擔心？<span class="q-hint">可複選，也歡迎下面補充。</span></label>
+      <div class="options">
+        <label class="opt check"><input type="checkbox" name="q13" value="學不會"><span class="box"></span><span class="lbl">怕自己學不會、跟不上</span></label>
+        <label class="opt check"><input type="checkbox" name="q13" value="會出錯"><span class="box"></span><span class="lbl">怕 AI 給錯資訊，反而害到客人</span></label>
+        <label class="opt check"><input type="checkbox" name="q13" value="取代"><span class="box"></span><span class="lbl">怕被取代、變成不需要人</span></label>
+        <label class="opt check"><input type="checkbox" name="q13" value="隱私"><span class="box"></span><span class="lbl">怕公司／客人資料外流</span></label>
+        <label class="opt check"><input type="checkbox" name="q13" value="沒人味"><span class="box"></span><span class="lbl">怕變得太冰冷，失去 birth 的溫度</span></label>
+        <label class="opt check"><input type="checkbox" name="q13" value="花錢"><span class="box"></span><span class="lbl">怕要花一堆錢買訂閱</span></label>
+        <label class="opt check"><input type="checkbox" name="q13" value="無"><span class="box"></span><span class="lbl">沒有特別擔心的</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q14.</span>還有什麼想說的擔心或期待嗎？<span class="q-hint">可選填，但你的真心話對我們很重要。</span></label>
+      <textarea class="text-input" name="q14" placeholder="想到什麼就寫什麼"></textarea>
+    </div>
+  </section>
+
+  <div class="section-divider">how you learn best</div>
+
+  <!-- ============ SECTION 5 ============ -->
+  <section class="block">
+    <div class="section-head">
+      <span class="section-num">05</span>
+      <h2 class="section-title">你想怎麼學</h2>
+    </div>
+    <p class="section-sub">講白話：哪種上課方式對你最有效？</p>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q15.</span>你比較喜歡的學習方式是？<span class="q-hint">最多選兩個</span></label>
+      <div class="options grid-2">
+        <label class="opt check"><input type="checkbox" name="q15" value="看示範"><span class="box"></span><span class="lbl">看老師示範一次</span></label>
+        <label class="opt check"><input type="checkbox" name="q15" value="動手做"><span class="box"></span><span class="lbl">直接動手做才記得住</span></label>
+        <label class="opt check"><input type="checkbox" name="q15" value="影片"><span class="box"></span><span class="lbl">看影片可以重複看</span></label>
+        <label class="opt check"><input type="checkbox" name="q15" value="講義"><span class="box"></span><span class="lbl">有書面講義／圖文懶人包</span></label>
+        <label class="opt check"><input type="checkbox" name="q15" value="小組"><span class="box"></span><span class="lbl">小組討論／互相練習</span></label>
+        <label class="opt check"><input type="checkbox" name="q15" value="一對一"><span class="box"></span><span class="lbl">私下一對一問問題</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q16.</span>一堂課多久你比較坐得住？</label>
+      <div class="options grid-2">
+        <label class="opt"><input type="radio" name="q16" value="30m"><span class="box"></span><span class="lbl">30 分鐘以內</span></label>
+        <label class="opt"><input type="radio" name="q16" value="1h"><span class="box"></span><span class="lbl">1 小時左右</span></label>
+        <label class="opt"><input type="radio" name="q16" value="1.5h"><span class="box"></span><span class="lbl">1.5 小時</span></label>
+        <label class="opt"><input type="radio" name="q16" value="2h+"><span class="box"></span><span class="lbl">2 小時以上也 OK</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q17.</span>下班後你願意花多少時間自己練習？</label>
+      <div class="options">
+        <label class="opt"><input type="radio" name="q17" value="active"><span class="box"></span><span class="lbl">很願意，每週願意花 1 小時以上練習</span></label>
+        <label class="opt"><input type="radio" name="q17" value="some"><span class="box"></span><span class="lbl">願意花一點時間，看狀況</span></label>
+        <label class="opt"><input type="radio" name="q17" value="none"><span class="box"></span><span class="lbl">課堂上學完就好，下班想休息</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <label class="q-label"><span class="num">Q18.</span>對這次的 AI 內訓，你最希望帶走的一件事是？<span class="q-hint">課程結束時你說「來這堂課好值得」的關鍵。</span></label>
+      <textarea class="text-input" name="q18" placeholder="例如：希望可以學會用 AI 幫我寫 IG 文案，這樣我每週可以省 3 小時"></textarea>
+    </div>
+  </section>
+
+  <!-- ============ SUBMIT ============ -->
+  <div class="submit-block">
+    <p class="closer serif">寫完了！謝謝你願意誠實分享</p>
+    <p class="closer-sub">按下下面的按鈕送出。<br>你的回覆會匿名安全地傳到 birth 內訓資料庫。</p>
+    <button type="submit" class="btn" id="submitBtn">
+      <span id="submitBtnText">送出我的回覆</span>
+      <svg id="submitBtnIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  </form>
+
+  <div class="footer">birth 城市聚落 · 內部訓練問卷 · 2026</div>
+</div>
+
+<!-- ============ RESULT MODAL ============ -->
+<div class="result-overlay" id="resultOverlay">
+  <div class="result-card">
+
+    <div id="successView">
+      <div class="icon">✿</div>
+      <h2 class="serif">收到你的回覆了</h2>
+      <p>
+        你的真心話已經安全傳到內訓資料庫。<br>
+        這會幫助我們設計出真的能幫到你的課程。<br>
+        謝謝你花時間填寫 ♡
+      </p>
+      <div class="result-actions">
+        <button type="button" class="btn" onclick="closeResult()">完成</button>
+      </div>
+    </div>
+
+    <div id="fallbackView" style="display:none;">
+      <div class="icon" style="background:#FCE8DD;">!</div>
+      <h2 class="serif">需要你手動傳一下</h2>
+      <p id="fallbackReason">回覆已整理完成。<br>請點「複製」或「下載」，再貼／傳到指定的回收管道。</p>
+
+      <div style="text-align:left; background: #fff; border:1px solid var(--line); border-radius: 12px; padding: 18px; max-height: 240px; overflow-y: auto; font-size: 12.5px; color: var(--ink); white-space: pre-wrap; line-height: 1.7; margin-bottom: 24px;" id="resultText"></div>
+
+      <div class="result-actions">
+        <button type="button" class="btn" onclick="copyResult()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          複製文字
+        </button>
+        <button type="button" class="btn btn-secondary" onclick="downloadResult()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          下載 .txt
+        </button>
+      </div>
+      <div class="copy-toast" id="copyToast">✓ 已複製到剪貼簿</div>
+
+      <p style="margin-top: 28px; font-size: 12px; color: var(--ink-soft);">
+        <a href="#" onclick="closeResult();return false;" style="color:var(--ink-soft);">回到問卷</a>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // ============================================
+  // ⚙️  設定區：把下面的網址換成你的 Google Apps Script Web App URL
+  // ============================================
+  const GAS_URL = 'https://script.google.com/macros/s/AKfycbzxrGFId-MXzuYQON4ojSkfcNPhailQs99q_jEjTP4z5LWoUPa5-eesoajWRC_EvALS/exec';
+  // 範例：const GAS_URL = 'https://script.google.com/macros/s/AKfycbx.../exec';
+  // ============================================
+
+  const form = document.getElementById('surveyForm');
+  const progressFill = document.getElementById('progressFill');
+
+  // ---- Question labels (Apps Script 也用相同順序) ----
+  const QUESTION_LABELS = {
+    q1: 'Q1. 角色',
+    q2: 'Q2. 年齡區間',
+    q3: 'Q3. 過去一個月用 AI 做過的事',
+    q4: 'Q4. 聽過/用過的 AI 工具',
+    q5: 'Q5. 過去一個月使用頻率',
+    q6: 'Q6. 怎麼用 AI、用得順不順',
+    q7: 'Q7. AI 熟練度等級',
+    q8: 'Q8. 工作中最常做的事',
+    q9: 'Q9. 重複又麻煩的事',
+    q10: 'Q10. 希望有人代勞的事',
+    q11: 'Q11. 最常用的工具',
+    q12: 'Q12. 最希望 AI 幫做的一件事',
+    q13: 'Q13. 對 AI 的擔心',
+    q14: 'Q14. 其他想說的話',
+    q15: 'Q15. 喜歡的學習方式',
+    q16: 'Q16. 一堂課的舒服長度',
+    q17: 'Q17. 下班後練習意願',
+    q18: 'Q18. 最希望帶走的一件事'
+  };
+
+  // ---- Progress bar ----
+  function updateProgress() {
+    const allRadios = form.querySelectorAll('input[type="radio"]');
+    const radioGroups = new Set();
+    allRadios.forEach(r => radioGroups.add(r.name));
+    const checkboxNames = new Set();
+    form.querySelectorAll('input[type="checkbox"]').forEach(c => checkboxNames.add(c.name));
+    const textareas = form.querySelectorAll('textarea');
+    let total = radioGroups.size + checkboxNames.size + textareas.length;
+    let done = 0;
+    radioGroups.forEach(name => { if (form.querySelector(`input[name="${name}"]:checked`)) done++; });
+    checkboxNames.forEach(name => { if (form.querySelector(`input[name="${name}"]:checked`)) done++; });
+    textareas.forEach(t => { if (t.value.trim()) done++; });
+    const pct = Math.min(100, (done / total) * 100);
+    progressFill.style.width = pct + '%';
+  }
+  form.addEventListener('change', updateProgress);
+  form.addEventListener('input', updateProgress);
+
+  // ---- "其他" 開放選項顯隱 ----
+  // q1 是 radio：選了「其他」才顯示 q1_other
+  // q11 是 checkbox：勾了「其他」才顯示 q11_other
+  function setupOtherReveal(name, otherInputId) {
+    const inputs = form.querySelectorAll(`input[name="${name}"]`);
+    const other = document.getElementById(otherInputId);
+    if (!other) return;
+    inputs.forEach(input => {
+      input.addEventListener('change', () => {
+        const otherChoice = form.querySelector(`input[name="${name}"][value="其他"]`);
+        const visible = otherChoice && otherChoice.checked;
+        other.classList.toggle('show', visible);
+        if (!visible) other.value = '';
+      });
+    });
+  }
+  setupOtherReveal('q1', 'q1_other');
+  setupOtherReveal('q11', 'q11_other');
+
+  // ---- Q15 限制最多 2 個 ----
+  const q15Boxes = form.querySelectorAll('input[name="q15"]');
+  q15Boxes.forEach(box => {
+    box.addEventListener('change', () => {
+      const checked = form.querySelectorAll('input[name="q15"]:checked');
+      if (checked.length > 2) box.checked = false;
+    });
+  });
+
+  // ---- 收集答案成物件 ----
+  function collectAnswersAsObject() {
+    const fd = new FormData(form);
+    const result = {};
+    for (const [k, v] of fd.entries()) {
+      if (k.endsWith('_other')) continue; // 先跳過 _other
+      if (result[k]) result[k] += '、' + v;
+      else result[k] = v;
+    }
+    // 把「其他」開放欄位的內容合併進主答案
+    ['q1', 'q11'].forEach(name => {
+      const otherText = (fd.get(name + '_other') || '').trim();
+      if (result[name] && result[name].includes('其他') && otherText) {
+        result[name] = result[name].replace('其他', `其他：${otherText}`);
+      }
+    });
+    // 確保所有題目都有 key（即使沒填）
+    Object.keys(QUESTION_LABELS).forEach(k => {
+      if (!(k in result)) result[k] = '';
+    });
+    return result;
+  }
+
+  // ---- 後備純文字格式 ----
+  function formatAnswersAsText(obj) {
+    let out = '──────────────────────────\n';
+    out += 'birth × AI 內訓問卷｜匿名回覆\n';
+    out += '提交時間：' + new Date().toLocaleString('zh-TW') + '\n';
+    out += '──────────────────────────\n\n';
+    Object.keys(QUESTION_LABELS).forEach(key => {
+      const val = obj[key];
+      out += QUESTION_LABELS[key] + '：\n';
+      out += (val && val.trim()) ? val : '（未填）';
+      out += '\n\n';
+    });
+    out += '──────────────────────────\n';
+    out += '謝謝你的回覆 ♡  birth 內訓團隊敬上\n';
+    return out;
+  }
+
+  // ---- Submit ----
+  const submitBtn = document.getElementById('submitBtn');
+  const submitBtnText = document.getElementById('submitBtnText');
+  const submitBtnIcon = document.getElementById('submitBtnIcon');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = collectAnswersAsObject();
+    data.timestamp = new Date().toISOString();
+    data.timestampLocal = new Date().toLocaleString('zh-TW');
+
+    submitBtn.disabled = true;
+    submitBtnText.textContent = '傳送中⋯⋯';
+    if (submitBtnIcon) submitBtnIcon.style.display = 'none';
+
+    const isConfigured = GAS_URL && !GAS_URL.includes('__PASTE_YOUR') && GAS_URL.startsWith('https://');
+
+    if (isConfigured) {
+      try {
+        await fetch(GAS_URL, {
+          method: 'POST',
+          body: JSON.stringify(data),
+          mode: 'no-cors'
+        });
+        showSuccess();
+      } catch (err) {
+        console.error('Submit error:', err);
+        showFallback(data, '送出時遇到網路問題，麻煩你手動傳一下：');
+      }
+    } else {
+      showFallback(data, '系統還在測試中，麻煩你手動傳回覆給負責人：');
+    }
+
+    submitBtn.disabled = false;
+    submitBtnText.textContent = '送出我的回覆';
+    if (submitBtnIcon) submitBtnIcon.style.display = '';
+  });
+
+  function showSuccess() {
+    document.getElementById('successView').style.display = 'block';
+    document.getElementById('fallbackView').style.display = 'none';
+    document.getElementById('resultOverlay').classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function showFallback(data, reason) {
+    document.getElementById('successView').style.display = 'none';
+    document.getElementById('fallbackView').style.display = 'block';
+    document.getElementById('fallbackReason').innerHTML = reason + '<br>請點下方「複製」或「下載」，再貼／傳到指定的回收管道。';
+    document.getElementById('resultText').textContent = formatAnswersAsText(data);
+    document.getElementById('resultOverlay').classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function copyResult() {
+    const txt = document.getElementById('resultText').textContent;
+    navigator.clipboard.writeText(txt).then(() => {
+      const toast = document.getElementById('copyToast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2400);
+    });
+  }
+
+  function downloadResult() {
+    const txt = document.getElementById('resultText').textContent;
+    const blob = new Blob([txt], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'birth-AI-survey-' + Date.now() + '.txt';
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function closeResult() {
+    document.getElementById('resultOverlay').classList.remove('show');
+    document.body.style.overflow = '';
+  }
+</script>
+
+</body>
+</html>
