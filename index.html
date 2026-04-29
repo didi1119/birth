@@ -331,6 +331,85 @@
   .copy-toast { margin-top: 16px; color: var(--leaf); font-size: 13px; opacity: 0; transition: opacity 0.3s; }
   .copy-toast.show { opacity: 1; }
 
+  /* ---------- Instructor card ---------- */
+  .instructor-card {
+    display: flex; align-items: center; gap: 20px;
+    padding: 18px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    margin-bottom: 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s;
+    box-shadow: var(--shadow);
+  }
+  .instructor-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+  }
+  .instructor-avatar {
+    flex-shrink: 0;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--accent-soft);
+    border: 1px solid var(--line);
+  }
+  .instructor-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .instructor-content { flex: 1; min-width: 0; }
+  .instructor-tag {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    font-weight: 500;
+  }
+  .instructor-name {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 17px; font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .instructor-name em {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--ink-soft);
+    font-size: 0.85em;
+    letter-spacing: 0;
+    margin-left: 4px;
+  }
+  .instructor-bio {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .instructor-arrow {
+    flex-shrink: 0;
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--accent);
+    transition: all 0.3s;
+  }
+  .instructor-card:hover .instructor-arrow {
+    background: var(--accent);
+    color: #fff;
+    transform: translateX(2px);
+  }
+  .instructor-arrow svg { width: 14px; height: 14px; }
+  @media (max-width: 540px) {
+    .instructor-card { padding: 14px 18px; gap: 14px; }
+    .instructor-avatar { width: 44px; height: 44px; }
+    .instructor-name { font-size: 15px; }
+    .instructor-bio { font-size: 12.5px; }
+  }
+
   /* ---------- Footer ---------- */
   .footer { text-align: center; margin-top: 64px; color: var(--ink-soft); font-size: 12px; letter-spacing: 0.15em; }
 
@@ -374,6 +453,21 @@
       </span>
     </div>
   </header>
+
+  <!-- ============ INSTRUCTOR CARD ============ -->
+  <a class="instructor-card" href="chill/" target="_blank" rel="noopener">
+    <div class="instructor-avatar">
+      <img src="chill/assets/logo-mr-chill.png" alt="Mr Chill">
+    </div>
+    <div class="instructor-content">
+      <div class="instructor-tag">關於講師　·　Your Instructor</div>
+      <div class="instructor-name">Mr Chill <em>· 一個住在森林、會寫一點 prompt 的人</em></div>
+      <div class="instructor-bio">陪你把 AI 從「聽過但用不到」變成順手的工作夥伴。點開看看我做過什麼 →</div>
+    </div>
+    <div class="instructor-arrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </div>
+  </a>
 
   <form id="surveyForm">
 
