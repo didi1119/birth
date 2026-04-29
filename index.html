@@ -800,9 +800,18 @@
 
     if (isConfigured) {
       try {
+        // 用 URLSearchParams（form-encoded）才能讓 body 穿過 GAS 的 302 redirect。
+        // 直接 JSON.stringify 當 body，body 會在 redirect 時被丟掉，GAS 收到空請求。
+        const params = new URLSearchParams();
+        Object.keys(data).forEach(k => {
+          const val = data[k];
+          if (val !== undefined && val !== null) {
+            params.append(k, String(val));
+          }
+        });
         await fetch(GAS_URL, {
           method: 'POST',
-          body: JSON.stringify(data),
+          body: params,
           mode: 'no-cors'
         });
         showSuccess();
