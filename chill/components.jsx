@@ -22,10 +22,10 @@ function Nav() {
 function StatusPill() {
   const [i, setI] = useState(0);
   const states = [
-    { dot: 'var(--moss)', label: 'In the forest · 搬石頭 · 07:12' },
-    { dot: 'var(--bark)', label: 'Claude Code 寫專案 · 14:08' },
-    { dot: 'var(--fern)', label: '陪虎鼻散步 · 17:30' },
-    { dot: 'var(--ink)',  label: 'Gemini 生成奇怪的影片 · 22:04' },
+    { dot: 'var(--moss)', label: '二館工地監工 · 09:14' },
+    { dot: 'var(--bark)', label: '幫忙挖土，挖到下午 · 13:26' },
+    { dot: 'var(--ink)',  label: '開回家才發現狗忘在山上 · 18:42' },
+    { dot: 'var(--fern)', label: '折返接虎鼻，嚇死 · 19:25' },
   ];
   useEffect(() => {
     const t = setInterval(() => setI(x => (x + 1) % states.length), 2800);
