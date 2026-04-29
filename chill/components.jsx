@@ -5,7 +5,7 @@ function Nav() {
   return (
     <header className="ml-nav">
       <a href="#top" className="ml-lock">
-        <img src="../../assets/logo-mr-chill.png" alt="Mr Chill" />
+        <img src="assets/logo-mr-chill.png" alt="Mr Chill" />
         <span>Mr Chill</span>
       </a>
       <nav>
@@ -64,7 +64,7 @@ function Hero() {
         <div><b>23</b><span>個還沒寫完的 prompt</span></div>
         <div><b>1</b><span>隻狗叫虎鼻</span></div>
       </div>
-      <img src="../../assets/logo-mr-chill.png" alt="" className="ml-hero-mark" />
+      <img src="assets/logo-mr-chill.png" alt="" className="ml-hero-mark" />
     </section>
   );
 }
@@ -249,7 +249,7 @@ function FindMe() {
 function Footer() {
   return (
     <footer className="ml-footer">
-      <img src="../../assets/logo-mr-chill.png" alt="" />
+      <img src="assets/logo-mr-chill.png" alt="" />
       <span>Mr Chill · 一個住在竹山森林、每天玩 AI 的人 · 2026</span>
     </footer>
   );
