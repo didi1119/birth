@@ -21,10 +21,18 @@ const els = {
   employeeFilter: $("#employeeFilter"),
   viewFilter: $("#viewFilter"),
   exportCsv: $("#exportCsv"),
+  employeeChips: $("#employeeChips"),
   metricShifts: $("#metricShifts"),
   metricEmployees: $("#metricEmployees"),
   metricHours: $("#metricHours"),
   metricNotes: $("#metricNotes"),
+  personalName: $("#personalName"),
+  personalRole: $("#personalRole"),
+  personalWorkCount: $("#personalWorkCount"),
+  personalHours: $("#personalHours"),
+  personalOffCount: $("#personalOffCount"),
+  personalNext: $("#personalNext"),
+  personalShiftList: $("#personalShiftList"),
   calendarTitle: $("#calendarTitle"),
   parseMeta: $("#parseMeta"),
   calendarGrid: $("#calendarGrid"),
@@ -69,7 +77,10 @@ els.dropZone.addEventListener("drop", (event) => {
   el.addEventListener("change", render);
 });
 
-els.messageEmployee.addEventListener("change", renderMessage);
+els.messageEmployee.addEventListener("change", () => {
+  if (els.messageEmployee.value) els.employeeFilter.value = els.messageEmployee.value;
+  render();
+});
 els.copyMessage.addEventListener("click", async () => {
   await navigator.clipboard.writeText(els.messageText.value);
   els.copyMessage.textContent = "已複製";
@@ -338,7 +349,7 @@ function captureEmployeeMeta(employee, row) {
   if (!state.employees.has(employee)) {
     state.employees.set(employee, { name: employee, role: "", shifts: 0, hours: 0 });
   }
-  const role = row.map(clean).find((value) => /正職|兼職|工讀/.test(value));
+  const role = row.map(clean).find((value) => /^(正職|兼職|工讀)$/.test(value));
   if (role) state.employees.get(employee).role = role;
 }
 
@@ -375,6 +386,10 @@ function populateFilters() {
   fillSelect(els.monthFilter, months.map((month) => [month, formatMonth(month)]));
   fillSelect(els.employeeFilter, [["all", "全部員工"], ...employees.map((name) => [name, name])]);
   fillSelect(els.messageEmployee, employees.map((name) => [name, name]));
+  if (employees.length) {
+    els.employeeFilter.value = employees[0];
+    els.messageEmployee.value = employees[0];
+  }
   els.exportCsv.disabled = state.shifts.length === 0;
   els.copyMessage.disabled = employees.length === 0;
 }
@@ -392,6 +407,8 @@ function fillSelect(select, options) {
 function render() {
   const shifts = getFilteredShifts();
   renderMetrics(shifts);
+  renderEmployeeChips();
+  renderPersonalFocus();
   renderCalendar(shifts);
   renderTable(shifts);
   renderStaffBars(shifts);
@@ -413,6 +430,17 @@ function getFilteredShifts() {
   });
 }
 
+function getMonthShifts() {
+  const month = currentMonthKey();
+  return state.shifts.filter((shift) => !month || shift.monthKey === month);
+}
+
+function getFocusEmployee() {
+  return els.employeeFilter.value && els.employeeFilter.value !== "all"
+    ? els.employeeFilter.value
+    : els.messageEmployee.value;
+}
+
 function currentMonthKey() {
   return els.monthFilter.value || "";
 }
@@ -423,6 +451,92 @@ function renderMetrics(shifts) {
   els.metricEmployees.textContent = unique(work.map((shift) => shift.employee)).length.toLocaleString("zh-Hant");
   els.metricHours.textContent = work.reduce((sum, shift) => sum + shift.hours, 0).toFixed(1);
   els.metricNotes.textContent = unique(shifts.filter((shift) => shift.note).map((shift) => shift.date)).length.toLocaleString("zh-Hant");
+}
+
+function renderEmployeeChips() {
+  const monthShifts = getMonthShifts();
+  const focus = getFocusEmployee();
+  const employees = Array.from(state.employees.keys())
+    .map((name) => ({
+      name,
+      count: monthShifts.filter((shift) => shift.employee === name && shift.status === "work").length,
+    }))
+    .filter((employee) => employee.count > 0)
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, "zh-Hant"));
+
+  if (!employees.length) {
+    els.employeeChips.innerHTML = "";
+    return;
+  }
+
+  els.employeeChips.innerHTML = employees.map((employee) => `
+    <button class="employee-chip ${employee.name === focus ? "is-active" : ""}" type="button" data-employee="${escapeHtml(employee.name)}">
+      ${escapeHtml(employee.name)} · ${employee.count} 班
+    </button>
+  `).join("");
+
+  els.employeeChips.querySelectorAll(".employee-chip").forEach((button) => {
+    button.addEventListener("click", () => {
+      const employee = button.dataset.employee;
+      els.employeeFilter.value = employee;
+      els.messageEmployee.value = employee;
+      render();
+    });
+  });
+}
+
+function renderPersonalFocus() {
+  const employee = getFocusEmployee();
+  const month = currentMonthKey();
+  const employeeMeta = state.employees.get(employee);
+  const monthShifts = getMonthShifts().filter((shift) => shift.employee === employee);
+  const work = monthShifts.filter((shift) => shift.status === "work");
+  const off = monthShifts.filter((shift) => shift.status === "off");
+  const totalHours = work.reduce((sum, shift) => sum + shift.hours, 0);
+
+  els.personalName.textContent = employee || "選擇員工";
+  els.personalRole.textContent = employeeMeta?.role
+    ? `${employeeMeta.role}｜${month ? formatMonth(month) : "全部月份"}`
+    : `${month ? formatMonth(month) : "全部月份"} 個人班表`;
+  els.personalWorkCount.textContent = work.length;
+  els.personalHours.textContent = totalHours.toFixed(1);
+  els.personalOffCount.textContent = off.length;
+
+  const upcoming = findUpcomingShift(work);
+  els.personalNext.textContent = upcoming
+    ? `下次上班：${formatShortDate(upcoming)} ${upcoming.start}-${upcoming.end}${upcoming.note ? `｜${upcoming.note}` : ""}`
+    : work.length
+      ? `本月最後一班：${formatShortDate(work[work.length - 1])} ${work[work.length - 1].start}-${work[work.length - 1].end}`
+      : "這個月份沒有排到上班班次";
+
+  const visible = [...work, ...off]
+    .sort((a, b) => a.date.localeCompare(b.date) || (b.status === "work" ? 1 : -1));
+
+  if (!visible.length) {
+    els.personalShiftList.innerHTML = `
+      <div class="empty-state">
+        <strong>沒有個人班表</strong>
+        <p>換一個月份或員工看看。</p>
+      </div>
+    `;
+    return;
+  }
+
+  els.personalShiftList.innerHTML = visible.map((shift) => `
+    <article class="personal-day ${shift.status === "off" ? "is-off" : ""}">
+      <div class="personal-date">
+        <span>${formatMonthDay(shift)}</span>
+        <span>${shift.weekday}</span>
+      </div>
+      <div class="personal-time">${shift.status === "work" ? `${shift.start}-${shift.end}` : "休假"}</div>
+      <div class="personal-note">${shift.status === "work" ? `${shift.hours.toFixed(1)} 小時` : "不上班"}${shift.note ? `｜${escapeHtml(shift.note)}` : ""}</div>
+    </article>
+  `).join("");
+}
+
+function findUpcomingShift(work) {
+  const today = toIso(new Date());
+  return work.find((shift) => shift.date >= today) || null;
 }
 
 function renderCalendar(shifts) {
@@ -442,6 +556,7 @@ function renderCalendar(shifts) {
   });
 
   const [year, monthNumber] = month.split("-").map(Number);
+  const focus = getFocusEmployee();
   const first = new Date(year, monthNumber - 1, 1);
   const totalDays = new Date(year, monthNumber, 0).getDate();
   for (let i = 0; i < first.getDay(); i += 1) {
@@ -464,10 +579,14 @@ function renderCalendar(shifts) {
       </div>
       ${note ? `<div class="event-note">${escapeHtml(note)}</div>` : ""}
     `;
-    dayShifts.slice(0, 5).forEach((shift) => {
+    dayShifts
+      .slice()
+      .sort((a, b) => (a.employee === focus ? -1 : 0) - (b.employee === focus ? -1 : 0))
+      .slice(0, 5)
+      .forEach((shift) => {
       const pill = document.createElement("button");
       pill.type = "button";
-      pill.className = `shift-pill ${shift.status}`;
+      pill.className = `shift-pill ${shift.status} ${focus && shift.employee !== focus && els.employeeFilter.value === "all" ? "is-muted" : ""}`;
       pill.textContent = shift.status === "work"
         ? `${shift.employee} ${shift.start}-${shift.end}`
         : `${shift.employee} ${shift.note || "休"}`;
@@ -530,11 +649,12 @@ function renderStaffBars(shifts) {
 }
 
 function renderMessage() {
-  const employee = els.messageEmployee.value;
+  const employee = getFocusEmployee();
   if (!employee) {
     els.messageText.value = "";
     return;
   }
+  if (els.messageEmployee.value !== employee) els.messageEmployee.value = employee;
   const month = currentMonthKey();
   const shifts = state.shifts
     .filter((shift) => shift.employee === employee && (!month || shift.monthKey === month) && shift.status === "work")
@@ -617,6 +737,14 @@ function formatMonth(monthKey) {
   if (!monthKey) return "";
   const [year, month] = monthKey.split("-");
   return `${year} 年 ${Number(month)} 月`;
+}
+
+function formatShortDate(shift) {
+  return `${Number(shift.date.slice(5, 7))}/${Number(shift.date.slice(8, 10))}（${shift.weekday}）`;
+}
+
+function formatMonthDay(shift) {
+  return `${Number(shift.date.slice(5, 7))}/${Number(shift.date.slice(8, 10))}`;
 }
 
 function escapeHtml(text) {
