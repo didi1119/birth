@@ -1,7 +1,10 @@
-# birth × AI 內訓問卷
+# birth 班表整理工具
 
-員工 AI 認知與工作痛點調查問卷。
+上傳每月 PDF 或 Excel 班表後，網頁會在瀏覽器端整理：
 
-🔗 **線上填寫**：https://didi1119.github.io/birth/
+- 每日人力與月曆視覺化
+- 各員工班次、總工時與休假
+- 可複製給員工的班表通知文案
+- CSV 匯出，方便後續留存或再加工
 
-回覆會自動匯入 Google Sheets。
+這是純靜態網頁，可直接部署到 Vercel，也可用 GitHub Pages 開啟。
