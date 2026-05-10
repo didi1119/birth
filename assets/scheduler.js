@@ -5,6 +5,7 @@ const state = {
   employees: new Map(),
   dayNotes: new Map(),
   warnings: [],
+  adminAuthenticated: false,
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -17,6 +18,7 @@ const els = {
   fileInput: $("#fileInput"),
   pickFile: $("#pickFile"),
   adminPassword: $("#adminPassword"),
+  adminLogin: $("#adminLogin"),
   publishRoster: $("#publishRoster"),
   statusLine: $("#statusLine"),
   adminStatus: $("#adminStatus"),
@@ -52,7 +54,10 @@ if (window.pdfjsLib) {
 }
 
 els.pickFile.addEventListener("click", () => {
-  if (!hasAdminPassword()) return;
+  if (!isAdminAuthenticated()) {
+    setAdminStatus("請先完成主管登入。", "error");
+    return;
+  }
   els.fileInput.click();
 });
 els.fileInput.addEventListener("change", (event) => {
@@ -60,7 +65,14 @@ els.fileInput.addEventListener("change", (event) => {
   if (file) handleFile(file);
 });
 
-els.adminPassword.addEventListener("input", updateAdminControls);
+els.adminLogin.addEventListener("click", verifyAdminLogin);
+els.adminPassword.addEventListener("input", () => {
+  state.adminAuthenticated = false;
+  updateAdminControls();
+});
+els.adminPassword.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") verifyAdminLogin();
+});
 els.publishRoster.addEventListener("click", publishRoster);
 
 ["dragenter", "dragover"].forEach((type) => {
@@ -78,8 +90,8 @@ els.publishRoster.addEventListener("click", publishRoster);
 });
 
 els.dropZone.addEventListener("drop", (event) => {
-  if (!hasAdminPassword()) {
-    setAdminStatus("請先輸入主管密碼再上傳。", "error");
+  if (!isAdminAuthenticated()) {
+    setAdminStatus("請先完成主管登入再上傳。", "error");
     return;
   }
   const [file] = event.dataTransfer.files;
@@ -148,7 +160,7 @@ async function handleFile(file) {
     populateFilters();
     render();
     setStatus(`完成：${state.shifts.length} 筆紀錄、${state.employees.size} 位員工`);
-    els.publishRoster.disabled = !state.shifts.length || !hasAdminPassword();
+    els.publishRoster.disabled = !state.shifts.length || !isAdminAuthenticated();
     setAdminStatus("解析完成，確認內容後可發布給員工。", "ready");
   } catch (error) {
     console.error(error);
@@ -185,8 +197,8 @@ async function publishRoster() {
     setAdminStatus("沒有可發布的班表，請先上傳檔案。", "error");
     return;
   }
-  if (!hasAdminPassword()) {
-    setAdminStatus("請先輸入主管密碼。", "error");
+  if (!isAdminAuthenticated()) {
+    setAdminStatus("請先完成主管登入。", "error");
     return;
   }
 
@@ -210,6 +222,36 @@ async function publishRoster() {
   } catch (error) {
     setAdminStatus(error.message, "error");
     els.publishRoster.disabled = false;
+  }
+}
+
+async function verifyAdminLogin() {
+  if (!hasAdminPassword()) {
+    state.adminAuthenticated = false;
+    updateAdminControls();
+    setAdminStatus("請輸入主管密碼。", "error");
+    return;
+  }
+
+  els.adminLogin.disabled = true;
+  setAdminStatus("登入驗證中...", "ready");
+  try {
+    const response = await fetch("/api/admin-auth", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ password: els.adminPassword.value }),
+    });
+    const data = await response.json();
+    if (!response.ok || !data.ok) throw new Error(data.error || "主管登入失敗。");
+    state.adminAuthenticated = true;
+    updateAdminControls();
+    setAdminStatus("主管登入成功，可上傳班表。", "ready");
+  } catch (error) {
+    state.adminAuthenticated = false;
+    updateAdminControls();
+    setAdminStatus(error.message, "error");
+  } finally {
+    els.adminLogin.disabled = false;
   }
 }
 
@@ -258,12 +300,23 @@ function hasAdminPassword() {
   return els.adminPassword.value.trim().length > 0;
 }
 
+function isAdminAuthenticated() {
+  return state.adminAuthenticated && hasAdminPassword();
+}
+
 function updateAdminControls() {
-  const ready = hasAdminPassword();
+  const ready = isAdminAuthenticated();
+  els.adminLogin.disabled = !hasAdminPassword();
   els.pickFile.disabled = !ready;
   els.publishRoster.disabled = !ready || !state.shifts.length;
   els.dropZone.classList.toggle("is-admin-ready", ready);
-  setAdminStatus(ready ? "主管模式已開啟，可上傳班表。" : "尚未登入主管模式", ready ? "ready" : "");
+  if (ready) {
+    setAdminStatus("主管登入成功，可上傳班表。", "ready");
+  } else if (hasAdminPassword()) {
+    setAdminStatus("請按主管登入驗證密碼。", "");
+  } else {
+    setAdminStatus("尚未登入主管模式", "");
+  }
 }
 
 async function parseWorkbook(file) {
