@@ -16,7 +16,10 @@ const els = {
   dropZone: $("#dropZone"),
   fileInput: $("#fileInput"),
   pickFile: $("#pickFile"),
+  adminPassword: $("#adminPassword"),
+  publishRoster: $("#publishRoster"),
   statusLine: $("#statusLine"),
+  adminStatus: $("#adminStatus"),
   monthFilter: $("#monthFilter"),
   employeeFilter: $("#employeeFilter"),
   viewFilter: $("#viewFilter"),
@@ -48,11 +51,17 @@ if (window.pdfjsLib) {
   window.pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
 }
 
-els.pickFile.addEventListener("click", () => els.fileInput.click());
+els.pickFile.addEventListener("click", () => {
+  if (!hasAdminPassword()) return;
+  els.fileInput.click();
+});
 els.fileInput.addEventListener("change", (event) => {
   const [file] = event.target.files;
   if (file) handleFile(file);
 });
+
+els.adminPassword.addEventListener("input", updateAdminControls);
+els.publishRoster.addEventListener("click", publishRoster);
 
 ["dragenter", "dragover"].forEach((type) => {
   els.dropZone.addEventListener(type, (event) => {
@@ -69,6 +78,10 @@ els.fileInput.addEventListener("change", (event) => {
 });
 
 els.dropZone.addEventListener("drop", (event) => {
+  if (!hasAdminPassword()) {
+    setAdminStatus("請先輸入主管密碼再上傳。", "error");
+    return;
+  }
   const [file] = event.dataTransfer.files;
   if (file) handleFile(file);
 });
@@ -135,10 +148,90 @@ async function handleFile(file) {
     populateFilters();
     render();
     setStatus(`完成：${state.shifts.length} 筆紀錄、${state.employees.size} 位員工`);
+    els.publishRoster.disabled = !state.shifts.length || !hasAdminPassword();
+    setAdminStatus("解析完成，確認內容後可發布給員工。", "ready");
   } catch (error) {
     console.error(error);
     setStatus(`解析失敗：${error.message}`);
   }
+}
+
+async function loadPublishedRoster() {
+  setStatus("正在讀取最新班表...");
+  try {
+    const response = await fetch("/api/roster", { cache: "no-store" });
+    if (!response.ok) throw new Error("目前沒有雲端班表 API。");
+    const data = await response.json();
+    if (!data.hasRoster) {
+      setStatus("尚未發布班表");
+      populateFilters();
+      render();
+      return;
+    }
+    applyRosterPayload(data.roster);
+    populateFilters();
+    render();
+    setStatus(`已載入最新班表：${state.sourceName || "未命名班表"}`);
+  } catch (error) {
+    console.info(error);
+    setStatus("尚未載入雲端班表；主管可登入上傳。");
+    populateFilters();
+    render();
+  }
+}
+
+async function publishRoster() {
+  if (!state.shifts.length) {
+    setAdminStatus("沒有可發布的班表，請先上傳檔案。", "error");
+    return;
+  }
+  if (!hasAdminPassword()) {
+    setAdminStatus("請先輸入主管密碼。", "error");
+    return;
+  }
+
+  els.publishRoster.disabled = true;
+  setAdminStatus("發布中...", "ready");
+
+  try {
+    const payload = buildRosterPayload();
+    const response = await fetch("/api/roster", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        password: els.adminPassword.value,
+        payload,
+      }),
+    });
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.error || "發布失敗。");
+    setAdminStatus("已發布，員工重新整理網頁就會看到最新班表。", "ready");
+    setStatus(`已發布：${state.shifts.length} 筆紀錄、${state.employees.size} 位員工`);
+  } catch (error) {
+    setAdminStatus(error.message, "error");
+    els.publishRoster.disabled = false;
+  }
+}
+
+function buildRosterPayload() {
+  return {
+    version: 1,
+    sourceName: state.sourceName,
+    publishedAt: new Date().toISOString(),
+    shifts: state.shifts,
+    employees: Array.from(state.employees.values()),
+    dayNotes: Object.fromEntries(state.dayNotes),
+    warnings: state.warnings,
+  };
+}
+
+function applyRosterPayload(payload) {
+  state.sourceName = payload.sourceName || "已發布班表";
+  state.shifts = Array.isArray(payload.shifts) ? payload.shifts : [];
+  state.employees = new Map((payload.employees || []).map((employee) => [employee.name, employee]));
+  state.dayNotes = new Map(Object.entries(payload.dayNotes || {}));
+  state.warnings = payload.warnings || [];
+  normalizeCollections();
 }
 
 function resetData(sourceName) {
@@ -153,6 +246,24 @@ function resetData(sourceName) {
 
 function setStatus(message) {
   els.statusLine.textContent = message;
+}
+
+function setAdminStatus(message, type = "") {
+  els.adminStatus.textContent = message;
+  els.adminStatus.classList.toggle("is-ready", type === "ready");
+  els.adminStatus.classList.toggle("is-error", type === "error");
+}
+
+function hasAdminPassword() {
+  return els.adminPassword.value.trim().length > 0;
+}
+
+function updateAdminControls() {
+  const ready = hasAdminPassword();
+  els.pickFile.disabled = !ready;
+  els.publishRoster.disabled = !ready || !state.shifts.length;
+  els.dropZone.classList.toggle("is-admin-ready", ready);
+  setAdminStatus(ready ? "主管模式已開啟，可上傳班表。" : "尚未登入主管模式", ready ? "ready" : "");
 }
 
 async function parseWorkbook(file) {
@@ -756,5 +867,5 @@ function escapeHtml(text) {
     .replaceAll("'", "&#039;");
 }
 
-populateFilters();
-render();
+updateAdminControls();
+loadPublishedRoster();

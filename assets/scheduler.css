@@ -86,7 +86,7 @@ h2 {
 .upload-panel {
   min-height: 220px;
   display: grid;
-  place-items: center;
+  justify-items: center;
   align-content: center;
   gap: 12px;
   padding: 28px;
@@ -136,11 +136,40 @@ button:disabled {
   cursor: not-allowed;
 }
 
+.admin-login {
+  width: min(100%, 280px);
+  text-align: left;
+}
+
+.admin-login input {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: white;
+  color: var(--ink);
+  padding: 8px 10px;
+}
+
+.upload-panel.is-admin-ready {
+  border-color: var(--teal);
+}
+
 #fileHint,
 .status-line,
 #parseMeta {
   color: var(--muted);
   font-size: 13px;
+}
+
+#adminStatus.is-ready {
+  color: var(--teal);
+  font-weight: 700;
+}
+
+#adminStatus.is-error {
+  color: var(--rose);
+  font-weight: 700;
 }
 
 .toolbar {

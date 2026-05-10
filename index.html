@@ -16,14 +16,20 @@
     <section class="hero">
       <div>
         <p class="eyebrow">birth roster console</p>
-        <h1>上傳每月班表，自動整理員工上班日</h1>
-        <p class="lede">支援 Excel 與 PDF。系統會辨識日期、員工、上下班時間、休假與活動備註，整理成月曆、人力熱度、員工通知文案與 CSV 匯出。</p>
+        <h1>員工看自己的班，主管發布最新班表</h1>
+        <p class="lede">員工打開網頁會自動看到最新班表。主管登入後上傳 Excel 或 PDF，系統會辨識日期、員工、上下班時間、休假與活動備註，並發布給所有人查看。</p>
       </div>
       <div class="upload-panel" id="dropZone">
         <input id="fileInput" type="file" accept=".xlsx,.xls,.csv,.pdf,application/pdf,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" hidden>
-        <button class="primary-action" id="pickFile" type="button">選擇班表檔案</button>
-        <p id="fileHint">或將 PDF / Excel 拖曳到這裡</p>
-        <div class="status-line" id="statusLine">尚未上傳</div>
+        <label class="admin-login">
+          主管密碼
+          <input id="adminPassword" type="password" autocomplete="current-password" placeholder="輸入後可上傳與發布">
+        </label>
+        <button class="primary-action" id="pickFile" type="button" disabled>選擇班表檔案</button>
+        <button class="ghost-action" id="publishRoster" type="button" disabled>發布給員工</button>
+        <p id="fileHint">主管可拖曳 PDF / Excel 到這裡，解析確認後再發布。</p>
+        <div class="status-line" id="statusLine">正在讀取最新班表...</div>
+        <div class="status-line" id="adminStatus">尚未登入主管模式</div>
       </div>
     </section>
 
