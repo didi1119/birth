@@ -781,11 +781,11 @@ function renderTable(shifts) {
   shifts.forEach((shift) => {
     const row = document.createElement("tr");
     row.innerHTML = `
-      <td>${shift.date}（${shift.weekday}）</td>
-      <td>${escapeHtml(shift.employee)}</td>
-      <td>${shift.status === "work" ? `${shift.start} - ${shift.end}` : "休假"}</td>
-      <td>${shift.hours ? shift.hours.toFixed(1) : ""}</td>
-      <td>${escapeHtml(shift.note || "")}</td>
+      <td data-label="日期">${shift.date}（${shift.weekday}）</td>
+      <td data-label="員工">${escapeHtml(shift.employee)}</td>
+      <td data-label="班次">${shift.status === "work" ? `${shift.start} - ${shift.end}` : "休假"}</td>
+      <td data-label="工時">${shift.hours ? shift.hours.toFixed(1) : ""}</td>
+      <td data-label="備註">${escapeHtml(shift.note || "")}</td>
     `;
     els.shiftTable.append(row);
   });
