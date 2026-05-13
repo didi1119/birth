@@ -940,6 +940,14 @@ th {
     grid-column: auto;
   }
 
+  .toolbar label:nth-of-type(3),
+  .toolbar .ghost-action,
+  .employee-strip,
+  .metrics-grid,
+  .personal-summary .personal-kpis {
+    display: none;
+  }
+
   .metrics-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 8px;
