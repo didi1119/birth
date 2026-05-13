@@ -611,7 +611,7 @@ function render() {
   renderMetrics(shifts);
   renderEmployeeChips();
   renderPersonalFocus();
-  renderCalendar(shifts);
+  renderCalendar(getMonthShifts());
   renderTable(shifts);
   renderStaffBars(shifts);
   renderMessage();
