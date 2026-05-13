@@ -418,7 +418,7 @@ body[data-focused="personal"] .workspace {
 @media (min-width: 721px) {
   body[data-focused="personal"] .personal-focus {
     display: block;
-    margin-bottom: 14px;
+    margin-bottom: 22px;
   }
 
   body[data-focused="personal"] .personal-list {
@@ -426,49 +426,78 @@ body[data-focused="personal"] .workspace {
   }
 
   body[data-focused="personal"] .personal-summary {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 14px 22px;
-    padding: 14px 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "eyebrow stats"
+      "title   stats"
+      "next    stats";
+    gap: 4px 32px;
+    padding: 32px 36px;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+    box-shadow: none;
   }
 
-  body[data-focused="personal"] .personal-summary > .eyebrow,
-  body[data-focused="personal"] .personal-summary > p {
-    display: none;
+  body[data-focused="personal"] .personal-summary > .eyebrow {
+    grid-area: eyebrow;
+    margin: 0;
+    font-size: 11px;
+    letter-spacing: 0.14em;
   }
 
   body[data-focused="personal"] .personal-summary h2 {
-    margin: 0;
-    font-size: 20px;
+    grid-area: title;
+    margin: 0 0 14px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0;
   }
 
-  body[data-focused="personal"] .personal-kpis {
-    display: flex;
-    margin: 0;
-    gap: 16px;
-  }
-
-  body[data-focused="personal"] .personal-kpis span {
-    min-height: 0;
-    padding: 0;
-    background: transparent;
-    border: 0;
-    flex-direction: row;
-    align-items: baseline;
-    gap: 4px;
-    font-size: 12px;
-  }
-
-  body[data-focused="personal"] .personal-kpis strong {
-    font-size: 16px;
+  body[data-focused="personal"] .personal-summary > p:not(.eyebrow) {
+    display: none;
   }
 
   body[data-focused="personal"] .next-shift {
-    margin-left: auto;
-    padding: 8px 14px;
-    font-size: 13px;
-    line-height: 1.4;
+    grid-area: next;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: var(--ink);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.18;
+    letter-spacing: -0.01em;
+  }
+
+  body[data-focused="personal"] .personal-kpis {
+    grid-area: stats;
+    display: flex;
+    align-self: end;
+    align-items: flex-end;
+    gap: 28px;
+    margin: 0;
+  }
+
+  body[data-focused="personal"] .personal-kpis span {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    min-height: 0;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2px;
+    text-align: right;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  body[data-focused="personal"] .personal-kpis strong {
+    color: var(--ink);
+    font-size: 22px;
+    line-height: 1;
   }
 }
 
