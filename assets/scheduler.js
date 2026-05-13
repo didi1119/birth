@@ -47,7 +47,25 @@ const els = {
   copyMessage: $("#copyMessage"),
   staffBars: $("#staffBars"),
   emptyState: $("#emptyState"),
+  dayDetail: $("#dayDetail"),
+  dayDetailTitle: $("#dayDetailTitle"),
+  dayDetailWeekday: $("#dayDetailWeekday"),
+  dayDetailNote: $("#dayDetailNote"),
+  dayDetailWorkSection: $("#dayDetailWorkSection"),
+  dayDetailWorkList: $("#dayDetailWorkList"),
+  dayDetailOffSection: $("#dayDetailOffSection"),
+  dayDetailOffList: $("#dayDetailOffList"),
+  dayDetailClose: $("#dayDetailClose"),
 };
+
+if (els.dayDetailClose) {
+  els.dayDetailClose.addEventListener("click", () => closeDayDetail());
+}
+if (els.dayDetail) {
+  els.dayDetail.addEventListener("click", (event) => {
+    if (event.target === els.dayDetail) closeDayDetail();
+  });
+}
 
 if (window.pdfjsLib) {
   window.pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
@@ -729,13 +747,20 @@ function renderCalendar(shifts) {
     els.calendarGrid.append(blank);
   }
 
+  const todayIso = toIso(new Date());
   for (let day = 1; day <= totalDays; day += 1) {
     const iso = `${month}-${String(day).padStart(2, "0")}`;
     const dayShifts = shifts.filter((shift) => shift.date === iso);
     const work = dayShifts.filter((shift) => shift.status === "work");
     const note = state.dayNotes.get(iso) || dayShifts.find((shift) => shift.note)?.note || "";
-    const card = document.createElement("article");
-    card.className = `day-card ${offWords.test(note) ? "is-closed" : ""}`;
+    const card = document.createElement("button");
+    card.type = "button";
+    const classes = ["day-card"];
+    if (offWords.test(note)) classes.push("is-closed");
+    if (work.length > 0) classes.push("has-shifts");
+    if (iso === todayIso) classes.push("is-today");
+    card.className = classes.join(" ");
+    card.setAttribute("aria-label", `${day} 日，${work.length} 人上班`);
     card.innerHTML = `
       <div class="day-top">
         <span class="day-number">${day}</span>
@@ -748,17 +773,12 @@ function renderCalendar(shifts) {
       .sort((a, b) => (a.employee === focus ? -1 : 0) - (b.employee === focus ? -1 : 0))
       .slice(0, 5)
       .forEach((shift) => {
-      const pill = document.createElement("button");
-      pill.type = "button";
+      const pill = document.createElement("span");
       pill.className = `shift-pill ${shift.status} ${focus && shift.employee !== focus && els.employeeFilter.value === "all" ? "is-muted" : ""}`;
       pill.textContent = shift.status === "work"
         ? `${shift.employee} ${shift.start}-${shift.end}`
         : `${shift.employee} ${shift.note || "休"}`;
-      pill.addEventListener("click", () => {
-        els.employeeFilter.value = shift.employee;
-        els.messageEmployee.value = shift.employee;
-        render();
-      });
+      pill.dataset.employee = shift.employee;
       card.append(pill);
     });
     if (dayShifts.length > 5) {
@@ -767,8 +787,79 @@ function renderCalendar(shifts) {
       more.textContent = `另 ${dayShifts.length - 5} 筆`;
       card.append(more);
     }
+    card.addEventListener("click", (event) => {
+      const pill = event.target.closest(".shift-pill");
+      if (pill && pill.dataset.employee) {
+        els.employeeFilter.value = pill.dataset.employee;
+        els.messageEmployee.value = pill.dataset.employee;
+        render();
+        return;
+      }
+      openDayDetail(iso, day, dayShifts, note);
+    });
     els.calendarGrid.append(card);
   }
+}
+
+function openDayDetail(iso, day, dayShifts, note) {
+  if (!els.dayDetail || typeof els.dayDetail.showModal !== "function") return;
+  const [year, monthNumber] = iso.split("-").map(Number);
+  const weekday = weekdayNames[new Date(year, monthNumber - 1, day).getDay()];
+  const focus = getFocusEmployee();
+
+  els.dayDetailTitle.textContent = `${monthNumber}/${day}`;
+  els.dayDetailWeekday.textContent = `星期${weekday}`;
+
+  if (note) {
+    els.dayDetailNote.innerHTML = `<div class="day-detail-note">${escapeHtml(note)}</div>`;
+  } else {
+    els.dayDetailNote.innerHTML = "";
+  }
+
+  const work = dayShifts
+    .filter((shift) => shift.status === "work")
+    .slice()
+    .sort((a, b) => (a.start || "").localeCompare(b.start || "") || a.employee.localeCompare(b.employee, "zh-Hant"));
+  const off = dayShifts
+    .filter((shift) => shift.status === "off")
+    .slice()
+    .sort((a, b) => a.employee.localeCompare(b.employee, "zh-Hant"));
+
+  els.dayDetailWorkList.innerHTML = work.length
+    ? work.map((shift) => renderDayDetailItem(shift, focus)).join("")
+    : `<li class="day-detail-empty">沒有人上班</li>`;
+  els.dayDetailOffList.innerHTML = off.length
+    ? off.map((shift) => renderDayDetailItem(shift, focus)).join("")
+    : `<li class="day-detail-empty">沒有休假紀錄</li>`;
+
+  els.dayDetailOffSection.style.display = off.length ? "" : "none";
+
+  els.dayDetail.showModal();
+}
+
+function renderDayDetailItem(shift, focus) {
+  const isFocus = focus && shift.employee === focus;
+  const classes = ["day-detail-item"];
+  if (shift.status === "off") classes.push("is-off");
+  if (isFocus) classes.push("is-focus");
+  const time = shift.status === "work"
+    ? `${shift.start}-${shift.end}`
+    : "休假";
+  const meta = [
+    shift.status === "work" && shift.hours ? `${shift.hours.toFixed(1)} 小時` : "",
+    shift.note ? escapeHtml(shift.note) : "",
+  ].filter(Boolean).join("｜");
+  return `
+    <li class="${classes.join(" ")}">
+      <span class="day-detail-name">${escapeHtml(shift.employee)}</span>
+      <span class="day-detail-time">${time}</span>
+      ${meta ? `<span class="day-detail-meta">${meta}</span>` : ""}
+    </li>
+  `;
+}
+
+function closeDayDetail() {
+  if (els.dayDetail && els.dayDetail.open) els.dayDetail.close();
 }
 
 function renderTable(shifts) {

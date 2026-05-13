@@ -125,6 +125,27 @@
     </section>
   </main>
 
+  <dialog id="dayDetail" class="day-detail" aria-label="當日班表詳情">
+    <div class="day-detail-card">
+      <header class="day-detail-head">
+        <div>
+          <h2 class="day-detail-title" id="dayDetailTitle">日期</h2>
+          <p class="day-detail-weekday" id="dayDetailWeekday"></p>
+        </div>
+        <button type="button" class="day-detail-close" id="dayDetailClose" aria-label="關閉">×</button>
+      </header>
+      <div id="dayDetailNote"></div>
+      <section class="day-detail-section" id="dayDetailWorkSection">
+        <h3>上班</h3>
+        <ul class="day-detail-list" id="dayDetailWorkList"></ul>
+      </section>
+      <section class="day-detail-section" id="dayDetailOffSection">
+        <h3>休假</h3>
+        <ul class="day-detail-list" id="dayDetailOffList"></ul>
+      </section>
+    </div>
+  </dialog>
+
   <template id="emptyState">
     <div class="empty-state">
       <strong>先上傳一份班表</strong>
