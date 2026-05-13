@@ -12,6 +12,23 @@ const $ = (selector) => document.querySelector(selector);
 const weekdayNames = ["日", "一", "二", "三", "四", "五", "六"];
 const offWords = /休|公休|店休|補休|請假|特休/;
 const datePattern = /(\d{1,2})\s*\/\s*(\d{1,2})/;
+const LAST_EMPLOYEE_KEY = "birth-roster.last-employee";
+
+function readSavedEmployee() {
+  try {
+    return localStorage.getItem(LAST_EMPLOYEE_KEY) || "";
+  } catch {
+    return "";
+  }
+}
+
+function writeSavedEmployee(value) {
+  try {
+    if (value) localStorage.setItem(LAST_EMPLOYEE_KEY, value);
+  } catch {
+    /* localStorage unavailable, ignore */
+  }
+}
 
 const els = {
   dropZone: $("#dropZone"),
@@ -593,6 +610,10 @@ function populateFilters() {
   if (employees.length) {
     els.messageEmployee.value = employees[0];
   }
+  const savedEmployee = readSavedEmployee();
+  if (savedEmployee === "all" || (savedEmployee && employees.includes(savedEmployee))) {
+    els.employeeFilter.value = savedEmployee;
+  }
   els.exportCsv.disabled = state.shifts.length === 0;
   els.copyMessage.disabled = employees.length === 0;
 }
@@ -610,6 +631,7 @@ function fillSelect(select, options) {
 function render() {
   const shifts = getFilteredShifts();
   const focus = getFocusEmployee();
+  if (state.employees.size > 0) writeSavedEmployee(els.employeeFilter.value);
   document.querySelector(".personal-focus")?.classList.toggle("is-hidden", !focus);
   renderMetrics(shifts);
   renderEmployeeChips();
