@@ -13,26 +13,17 @@
 </head>
 <body>
   <main class="shell">
-    <section class="hero">
-      <div>
-        <p class="eyebrow">birth roster console</p>
-        <h1>員工看自己的班，主管發布最新班表</h1>
-        <p class="lede">員工打開網頁會自動看到最新班表。主管登入後上傳 Excel 或 PDF，系統會辨識日期、員工、上下班時間、休假與活動備註，並發布給所有人查看。</p>
+    <header class="site-header">
+      <div class="brand">
+        <p class="eyebrow">birth roster</p>
+        <h1>班表查詢</h1>
       </div>
-      <div class="upload-panel" id="dropZone">
-        <input id="fileInput" type="file" accept=".xlsx,.xls,.csv,.pdf,application/pdf,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" hidden>
-        <label class="admin-login">
-          主管密碼
-          <input id="adminPassword" type="password" autocomplete="current-password" placeholder="輸入後可上傳與發布">
-        </label>
-        <button class="ghost-action" id="adminLogin" type="button">主管登入</button>
-        <button class="primary-action" id="pickFile" type="button" disabled>選擇班表檔案</button>
-        <button class="ghost-action" id="publishRoster" type="button" disabled>發布給員工</button>
-        <p id="fileHint">主管可拖曳 PDF / Excel 到這裡，解析確認後再發布。</p>
-        <div class="status-line" id="statusLine">正在讀取最新班表...</div>
-        <div class="status-line" id="adminStatus">尚未登入主管模式</div>
-      </div>
-    </section>
+      <button class="header-admin" id="openAdminPanel" type="button" aria-haspopup="dialog">
+        <span class="header-admin-icon" aria-hidden="true">⚙</span>
+        <span>主管</span>
+      </button>
+    </header>
+    <p class="status-banner" id="statusLine">正在讀取最新班表...</p>
 
     <section class="toolbar" aria-label="班表篩選">
       <label>
@@ -124,6 +115,34 @@
       </section>
     </section>
   </main>
+
+  <dialog id="adminPanel" class="admin-dialog" aria-label="主管模式">
+    <div class="admin-dialog-card">
+      <header class="admin-dialog-head">
+        <div>
+          <p class="eyebrow">supervisor</p>
+          <h2>主管模式</h2>
+        </div>
+        <button type="button" class="day-detail-close" id="adminPanelClose" aria-label="關閉">×</button>
+      </header>
+      <p class="admin-dialog-lede">登入後上傳 Excel 或 PDF，系統會解析後發布給所有員工。</p>
+      <label class="admin-login">
+        主管密碼
+        <input id="adminPassword" type="password" autocomplete="current-password" placeholder="輸入密碼以解鎖上傳">
+      </label>
+      <input id="fileInput" type="file" accept=".xlsx,.xls,.csv,.pdf,application/pdf,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" hidden>
+      <div class="admin-actions">
+        <button class="ghost-action" id="adminLogin" type="button">登入</button>
+        <button class="primary-action" id="pickFile" type="button" disabled>選擇班表檔案</button>
+        <button class="ghost-action" id="publishRoster" type="button" disabled>發布給員工</button>
+      </div>
+      <div class="admin-dropzone" id="dropZone">
+        <span class="admin-dropzone-title">拖曳檔案到這裡</span>
+        <span id="fileHint">登入後可拖曳 PDF / Excel，解析確認後再發布。</span>
+      </div>
+      <div class="status-line" id="adminStatus">尚未登入主管模式</div>
+    </div>
+  </dialog>
 
   <dialog id="dayDetail" class="day-detail" aria-label="當日班表詳情">
     <div class="day-detail-card">

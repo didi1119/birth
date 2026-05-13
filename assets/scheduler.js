@@ -47,6 +47,9 @@ const els = {
   copyMessage: $("#copyMessage"),
   staffBars: $("#staffBars"),
   emptyState: $("#emptyState"),
+  openAdminPanel: $("#openAdminPanel"),
+  adminPanel: $("#adminPanel"),
+  adminPanelClose: $("#adminPanelClose"),
   dayDetail: $("#dayDetail"),
   dayDetailTitle: $("#dayDetailTitle"),
   dayDetailWeekday: $("#dayDetailWeekday"),
@@ -57,6 +60,23 @@ const els = {
   dayDetailOffList: $("#dayDetailOffList"),
   dayDetailClose: $("#dayDetailClose"),
 };
+
+if (els.openAdminPanel) {
+  els.openAdminPanel.addEventListener("click", () => {
+    if (els.adminPanel && typeof els.adminPanel.showModal === "function") {
+      els.adminPanel.showModal();
+      setTimeout(() => els.adminPassword?.focus(), 50);
+    }
+  });
+}
+if (els.adminPanelClose) {
+  els.adminPanelClose.addEventListener("click", () => els.adminPanel?.close());
+}
+if (els.adminPanel) {
+  els.adminPanel.addEventListener("click", (event) => {
+    if (event.target === els.adminPanel) els.adminPanel.close();
+  });
+}
 
 if (els.dayDetailClose) {
   els.dayDetailClose.addEventListener("click", () => closeDayDetail());
@@ -204,7 +224,7 @@ async function loadPublishedRoster() {
     setStatus(`已載入最新班表：${state.sourceName || "未命名班表"}`);
   } catch (error) {
     console.info(error);
-    setStatus("尚未載入雲端班表；主管可登入上傳。");
+    setStatus("尚未載入雲端班表；請主管點右上角「主管」上傳。");
     populateFilters();
     render();
   }
