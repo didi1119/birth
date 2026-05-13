@@ -626,9 +626,50 @@ textarea {
   cursor: default;
 }
 
-.day-card.is-closed {
+.day-card.is-store-closed {
+  border-color: #d6dde4;
+  background: #f4f6f9;
+}
+
+.day-card.is-store-closed .day-number,
+.day-card.is-store-closed .coverage {
+  color: var(--muted);
+}
+
+.day-card.is-mine-work {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+}
+
+.day-card.is-mine-work .coverage {
+  color: var(--teal);
+  font-weight: 800;
+}
+
+.day-card.is-mine-off {
   border-color: #efc6c6;
-  background: #fff7f7;
+  background: #fff1f3;
+}
+
+.day-card.is-mine-off .coverage {
+  color: var(--rose);
+  font-weight: 800;
+}
+
+/* Personal-view colors should override store-closed neutral */
+.day-card.is-mine-work.is-store-closed {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+}
+
+.day-card.is-mine-off.is-store-closed {
+  border-color: #efc6c6;
+  background: #fff1f3;
+}
+
+.day-card.is-mine-work.is-store-closed .day-number,
+.day-card.is-mine-off.is-store-closed .day-number {
+  color: var(--ink);
 }
 
 .day-top {
@@ -1101,8 +1142,30 @@ th {
     border-color: var(--teal);
   }
 
-  .day-card.is-closed {
-    background: #fff7f7;
+  .day-card.is-store-closed {
+    background: #f4f6f9;
+    border-color: #d6dde4;
+  }
+
+  .day-card.is-mine-work {
+    background: var(--teal-soft);
+    border-color: var(--teal);
+  }
+
+  .day-card.is-mine-off {
+    background: #fff1f3;
+    border-color: #efc6c6;
+  }
+
+  /* Personal-view wins over store-closed neutral */
+  .day-card.is-mine-work.is-store-closed {
+    background: var(--teal-soft);
+    border-color: var(--teal);
+  }
+
+  .day-card.is-mine-off.is-store-closed {
+    background: #fff1f3;
+    border-color: #efc6c6;
   }
 
   .day-card.is-today {
@@ -1130,7 +1193,11 @@ th {
     line-height: 1.1;
   }
 
-  .day-card.is-closed .coverage {
+  .day-card.is-store-closed .coverage {
+    color: var(--muted);
+  }
+
+  .day-card.is-mine-off .coverage {
     color: var(--rose);
   }
 

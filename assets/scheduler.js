@@ -795,24 +795,49 @@ function renderCalendar(shifts) {
   }
 
   const todayIso = toIso(new Date());
+  const isAllEmployees = !focus || focus === "all" || els.employeeFilter.value === "all";
   for (let day = 1; day <= totalDays; day += 1) {
     const iso = `${month}-${String(day).padStart(2, "0")}`;
     const dayShifts = shifts.filter((shift) => shift.date === iso);
     const work = dayShifts.filter((shift) => shift.status === "work");
     const dayNote = state.dayNotes.get(iso) || "";
     const storeClosed = /公休|店休/.test(dayNote);
+
+    let stateClass = "";
+    let labelText = "";
+    let ariaLabel = "";
+    if (!isAllEmployees) {
+      const myShift = dayShifts.find((shift) => shift.employee === focus);
+      if (myShift && myShift.status === "work") {
+        stateClass = "is-mine-work";
+        labelText = `${myShift.start.slice(0, 2)}-${myShift.end.slice(0, 2)}`;
+        ariaLabel = `${day} 日，我上班 ${myShift.start}-${myShift.end}`;
+      } else if (myShift && myShift.status === "off") {
+        stateClass = "is-mine-off";
+        labelText = "休";
+        ariaLabel = `${day} 日，我休假`;
+      } else {
+        labelText = work.length ? `${work.length} 人` : "";
+        ariaLabel = `${day} 日，無個人班次`;
+      }
+    } else {
+      if (work.length > 0) stateClass = "has-shifts";
+      labelText = `${work.length} 人`;
+      ariaLabel = `${day} 日，${work.length} 人上班`;
+    }
+
     const card = document.createElement("button");
     card.type = "button";
     const classes = ["day-card"];
-    if (storeClosed) classes.push("is-closed");
-    if (work.length > 0) classes.push("has-shifts");
+    if (stateClass) classes.push(stateClass);
+    if (storeClosed) classes.push("is-store-closed");
     if (iso === todayIso) classes.push("is-today");
     card.className = classes.join(" ");
-    card.setAttribute("aria-label", `${day} 日，${work.length} 人上班`);
+    card.setAttribute("aria-label", ariaLabel);
     card.innerHTML = `
       <div class="day-top">
         <span class="day-number">${day}</span>
-        <span class="coverage">${work.length} 人</span>
+        <span class="coverage">${labelText}</span>
       </div>
       ${dayNote ? `<div class="event-note">${escapeHtml(dayNote)}</div>` : ""}
     `;
