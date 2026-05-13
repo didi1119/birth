@@ -588,6 +588,7 @@ function populateFilters() {
   fillSelect(els.monthFilter, months.map((month) => [month, formatMonth(month)]));
   fillSelect(els.employeeFilter, [["all", "全部員工"], ...employees.map((name) => [name, name])]);
   fillSelect(els.messageEmployee, employees.map((name) => [name, name]));
+  document.querySelector(".toolbar")?.toggleAttribute("data-single-month", months.length <= 1);
   if (employees.length) {
     els.employeeFilter.value = employees[0];
     els.messageEmployee.value = employees[0];
