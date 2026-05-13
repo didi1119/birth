@@ -799,11 +799,12 @@ function renderCalendar(shifts) {
     const iso = `${month}-${String(day).padStart(2, "0")}`;
     const dayShifts = shifts.filter((shift) => shift.date === iso);
     const work = dayShifts.filter((shift) => shift.status === "work");
-    const note = state.dayNotes.get(iso) || dayShifts.find((shift) => shift.note)?.note || "";
+    const dayNote = state.dayNotes.get(iso) || "";
+    const storeClosed = /公休|店休/.test(dayNote);
     const card = document.createElement("button");
     card.type = "button";
     const classes = ["day-card"];
-    if (offWords.test(note)) classes.push("is-closed");
+    if (storeClosed) classes.push("is-closed");
     if (work.length > 0) classes.push("has-shifts");
     if (iso === todayIso) classes.push("is-today");
     card.className = classes.join(" ");
@@ -813,7 +814,7 @@ function renderCalendar(shifts) {
         <span class="day-number">${day}</span>
         <span class="coverage">${work.length} 人</span>
       </div>
-      ${note ? `<div class="event-note">${escapeHtml(note)}</div>` : ""}
+      ${dayNote ? `<div class="event-note">${escapeHtml(dayNote)}</div>` : ""}
     `;
     dayShifts
       .slice()
@@ -842,7 +843,7 @@ function renderCalendar(shifts) {
         render();
         return;
       }
-      openDayDetail(iso, day, dayShifts, note);
+      openDayDetail(iso, day, dayShifts, dayNote);
     });
     els.calendarGrid.append(card);
   }
