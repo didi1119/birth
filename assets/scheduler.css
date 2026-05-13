@@ -960,12 +960,9 @@ th {
     gap: 12px;
   }
 
-  .workspace .main-pane {
-    order: 1;
-  }
-
-  .workspace .side-pane {
-    order: 2;
+  .workspace .side-pane,
+  .main-pane .table-wrap {
+    display: none;
   }
 
   .personal-summary,
