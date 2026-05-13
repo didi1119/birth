@@ -724,16 +724,42 @@ function renderPersonalFocus() {
     return;
   }
 
-  els.personalShiftList.innerHTML = visible.map((shift) => `
-    <article class="personal-day ${shift.status === "off" ? "is-off" : ""}">
-      <div class="personal-date">
-        <span>${formatMonthDay(shift)}</span>
-        <span>${shift.weekday}</span>
-      </div>
-      <div class="personal-time">${shift.status === "work" ? `${shift.start}-${shift.end}` : "休假"}</div>
-      <div class="personal-note">${shift.status === "work" ? `${shift.hours.toFixed(1)} 小時` : "不上班"}${shift.note ? `｜${escapeHtml(shift.note)}` : ""}</div>
-    </article>
-  `).join("");
+  const todayIso = toIso(new Date());
+  els.personalShiftList.innerHTML = visible.map((shift) => {
+    const classes = ["personal-day"];
+    if (shift.status === "off") classes.push("is-off");
+    if (shift.date === todayIso) classes.push("is-today");
+    return `
+      <article class="${classes.join(" ")}" data-date="${shift.date}">
+        <div class="personal-date">
+          <span>${formatMonthDay(shift)}</span>
+          <span>${shift.weekday}</span>
+        </div>
+        <div class="personal-time">${shift.status === "work" ? `${shift.start}-${shift.end}` : "休假"}</div>
+        <div class="personal-note">${shift.status === "work" ? `${shift.hours.toFixed(1)} 小時` : "不上班"}${shift.note ? `｜${escapeHtml(shift.note)}` : ""}</div>
+      </article>
+    `;
+  }).join("");
+
+  scrollPersonalListToToday(todayIso);
+}
+
+function scrollPersonalListToToday(todayIso) {
+  const list = els.personalShiftList;
+  if (!list) return;
+  const cards = list.querySelectorAll(".personal-day");
+  if (!cards.length) return;
+  let target = list.querySelector(`.personal-day[data-date="${todayIso}"]`);
+  if (!target) {
+    target = [...cards].find((card) => card.dataset.date >= todayIso) || cards[0];
+  }
+  if (!target) return;
+  const isMobile = window.matchMedia("(max-width: 720px)").matches;
+  if (isMobile) {
+    list.scrollLeft = Math.max(0, target.offsetLeft - list.offsetLeft - 12);
+  } else {
+    list.scrollTop = Math.max(0, target.offsetTop - list.offsetTop - 12);
+  }
 }
 
 function findUpcomingShift(work) {
