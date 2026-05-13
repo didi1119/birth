@@ -589,8 +589,8 @@ function populateFilters() {
   fillSelect(els.employeeFilter, [["all", "全部員工"], ...employees.map((name) => [name, name])]);
   fillSelect(els.messageEmployee, employees.map((name) => [name, name]));
   document.querySelector(".toolbar")?.toggleAttribute("data-single-month", months.length <= 1);
+  els.employeeFilter.value = "all";
   if (employees.length) {
-    els.employeeFilter.value = employees[0];
     els.messageEmployee.value = employees[0];
   }
   els.exportCsv.disabled = state.shifts.length === 0;
@@ -609,6 +609,8 @@ function fillSelect(select, options) {
 
 function render() {
   const shifts = getFilteredShifts();
+  const focus = getFocusEmployee();
+  document.querySelector(".personal-focus")?.classList.toggle("is-hidden", !focus);
   renderMetrics(shifts);
   renderEmployeeChips();
   renderPersonalFocus();
@@ -641,7 +643,7 @@ function getMonthShifts() {
 function getFocusEmployee() {
   return els.employeeFilter.value && els.employeeFilter.value !== "all"
     ? els.employeeFilter.value
-    : els.messageEmployee.value;
+    : "";
 }
 
 function currentMonthKey() {
@@ -690,6 +692,7 @@ function renderEmployeeChips() {
 
 function renderPersonalFocus() {
   const employee = getFocusEmployee();
+  if (!employee) return;
   const month = currentMonthKey();
   const employeeMeta = state.employees.get(employee);
   const monthShifts = getMonthShifts().filter((shift) => shift.employee === employee);
@@ -977,12 +980,11 @@ function renderStaffBars(shifts) {
 }
 
 function renderMessage() {
-  const employee = getFocusEmployee();
+  const employee = els.messageEmployee.value;
   if (!employee) {
     els.messageText.value = "";
     return;
   }
-  if (els.messageEmployee.value !== employee) els.messageEmployee.value = employee;
   const month = currentMonthKey();
   const shifts = state.shifts
     .filter((shift) => shift.employee === employee && (!month || shift.monthKey === month) && shift.status === "work")

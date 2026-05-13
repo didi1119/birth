@@ -400,6 +400,10 @@ select {
   margin-bottom: 16px;
 }
 
+.personal-focus.is-hidden {
+  display: none;
+}
+
 .personal-summary,
 .personal-list {
   background: var(--panel);
