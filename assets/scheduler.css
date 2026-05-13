@@ -415,6 +415,63 @@ body[data-focused="personal"] .workspace {
   grid-template-columns: 1fr;
 }
 
+@media (min-width: 721px) {
+  body[data-focused="personal"] .personal-focus {
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  body[data-focused="personal"] .personal-list {
+    display: none;
+  }
+
+  body[data-focused="personal"] .personal-summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px 22px;
+    padding: 14px 20px;
+  }
+
+  body[data-focused="personal"] .personal-summary > .eyebrow,
+  body[data-focused="personal"] .personal-summary > p {
+    display: none;
+  }
+
+  body[data-focused="personal"] .personal-summary h2 {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  body[data-focused="personal"] .personal-kpis {
+    display: flex;
+    margin: 0;
+    gap: 16px;
+  }
+
+  body[data-focused="personal"] .personal-kpis span {
+    min-height: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 4px;
+    font-size: 12px;
+  }
+
+  body[data-focused="personal"] .personal-kpis strong {
+    font-size: 16px;
+  }
+
+  body[data-focused="personal"] .next-shift {
+    margin-left: auto;
+    padding: 8px 14px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+}
+
 .personal-summary,
 .personal-list {
   background: var(--panel);
