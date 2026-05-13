@@ -632,6 +632,7 @@ function render() {
   const shifts = getFilteredShifts();
   const focus = getFocusEmployee();
   if (state.employees.size > 0) writeSavedEmployee(els.employeeFilter.value);
+  document.body.dataset.focused = focus ? "personal" : "all";
   document.querySelector(".personal-focus")?.classList.toggle("is-hidden", !focus);
   renderMetrics(shifts);
   renderEmployeeChips();

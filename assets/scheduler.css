@@ -404,6 +404,17 @@ select {
   display: none;
 }
 
+body[data-focused="personal"] .employee-strip,
+body[data-focused="personal"] .metrics-grid,
+body[data-focused="personal"] .side-pane,
+body[data-focused="personal"] .table-wrap {
+  display: none;
+}
+
+body[data-focused="personal"] .workspace {
+  grid-template-columns: 1fr;
+}
+
 .personal-summary,
 .personal-list {
   background: var(--panel);
