@@ -1,7 +1,7 @@
 {
   "version": 1,
   "sourceName": "5月班表.xlsx",
-  "publishedAt": "2026-05-13T06:50:29.910Z",
+  "publishedAt": "2026-05-14T08:21:29.229Z",
   "shifts": [
     {
       "date": "2026-05-01",
@@ -1322,11 +1322,11 @@
       "day": 14,
       "weekday": "四",
       "employee": "林奕廷",
-      "start": "17:30",
-      "end": "20:30",
-      "hours": 3,
-      "status": "work",
-      "note": "",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
       "sheet": "工作表1"
     },
     {
@@ -3125,8 +3125,8 @@
     {
       "name": "林奕廷",
       "role": "",
-      "shifts": 14,
-      "hours": 55.5
+      "shifts": 13,
+      "hours": 52.5
     },
     {
       "name": "范鈺偉",
