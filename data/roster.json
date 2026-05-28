@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceName": "5月班表.xlsx",
-  "publishedAt": "2026-05-16T10:51:56.829Z",
+  "sourceName": "5月班表 (1).xlsx",
+  "publishedAt": "2026-05-28T07:33:17.840Z",
   "shifts": [
     {
       "date": "2026-05-01",
@@ -2830,8 +2830,8 @@
       "day": 29,
       "weekday": "五",
       "employee": "許暐妮",
-      "start": "11:00",
-      "end": "20:00",
+      "start": "12:00",
+      "end": "21:00",
       "hours": 9,
       "status": "work",
       "note": "",
@@ -2869,9 +2869,9 @@
       "day": 29,
       "weekday": "五",
       "employee": "Bei",
-      "start": "11:30",
-      "end": "20:30",
-      "hours": 9,
+      "start": "11:00",
+      "end": "15:00",
+      "hours": 4,
       "status": "work",
       "note": "",
       "sheet": "工作表1"
@@ -3090,7 +3090,7 @@
       "name": "Bei",
       "role": "",
       "shifts": 20,
-      "hours": 180
+      "hours": 175
     },
     {
       "name": "許暐妮",
