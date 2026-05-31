@@ -1,20 +1,33 @@
 {
   "version": 1,
-  "sourceName": "Birth-2026班表 - 6月.pdf",
-  "publishedAt": "2026-05-31T05:57:26.438Z",
+  "sourceName": "2026 6 月班表.xlsx",
+  "publishedAt": "2026-05-31T05:58:22.290Z",
   "shifts": [
     {
       "date": "2026-06-01",
       "monthKey": "2026-06",
       "day": 1,
       "weekday": "一",
+      "employee": "吳佳蓁",
+      "start": "09:00",
+      "end": "05:30",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-01",
+      "monthKey": "2026-06",
+      "day": 1,
+      "weekday": "一",
       "employee": "林奕廷",
       "start": "",
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "林奕廷 休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-01",
@@ -26,8 +39,21 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "邱永承 休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-01",
+      "monthKey": "2026-06",
+      "day": 1,
+      "weekday": "一",
+      "employee": "許暐妮",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-01",
@@ -39,8 +65,73 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "陳湘婷 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-01",
+      "monthKey": "2026-06",
+      "day": 1,
+      "weekday": "一",
+      "employee": "潘奕勤",
+      "start": "18:00",
+      "end": "05:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-01",
+      "monthKey": "2026-06",
+      "day": 1,
+      "weekday": "一",
+      "employee": "蔡岱倪",
+      "start": "11:00",
+      "end": "15:00",
+      "hours": 4,
+      "status": "work",
+      "note": "報到",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-01",
+      "monthKey": "2026-06",
+      "day": 1,
+      "weekday": "一",
+      "employee": "蔡淨馨",
+      "start": "11:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "報到",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-01",
+      "monthKey": "2026-06",
+      "day": 1,
+      "weekday": "一",
+      "employee": "Bei",
+      "start": "11:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-02",
+      "monthKey": "2026-06",
+      "day": 2,
+      "weekday": "二",
+      "employee": "吳佳蓁",
+      "start": "10:00",
+      "end": "14:00",
+      "hours": 4,
+      "status": "work",
+      "note": "店內會議教育訓練",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-02",
@@ -52,8 +143,8 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "note": "店內會議教育訓練 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-02",
@@ -65,8 +156,21 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "店內會議教育訓練 / 休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-02",
+      "monthKey": "2026-06",
+      "day": 2,
+      "weekday": "二",
+      "employee": "范鈺偉",
+      "start": "10:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "店內會議教育訓練",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-02",
@@ -74,12 +178,25 @@
       "day": 2,
       "weekday": "二",
       "employee": "許暐妮",
-      "start": "18:00",
-      "end": "10:00",
+      "start": "10:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "店內會議教育訓練",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-02",
+      "monthKey": "2026-06",
+      "day": 2,
+      "weekday": "二",
+      "employee": "陳湘婷",
+      "start": "10:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "店內會議教育訓練",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-02",
@@ -91,8 +208,8 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "note": "店內會議教育訓練 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-02",
@@ -100,12 +217,12 @@
       "day": 2,
       "weekday": "二",
       "employee": "蔡岱倪",
-      "start": "15:00",
-      "end": "10:00",
-      "hours": 0,
+      "start": "10:00",
+      "end": "14:00",
+      "hours": 4,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "店內會議教育訓練",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-02",
@@ -113,12 +230,12 @@
       "day": 2,
       "weekday": "二",
       "employee": "蔡淨馨",
-      "start": "20:00",
-      "end": "10:00",
+      "start": "10:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "店內會議教育訓練",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-02",
@@ -126,25 +243,25 @@
       "day": 2,
       "weekday": "二",
       "employee": "Bei",
-      "start": "20:00",
-      "end": "10:00",
+      "start": "10:00",
+      "end": "09:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "店內會議教育訓練",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-03",
       "monthKey": "2026-06",
       "day": 3,
       "weekday": "三",
-      "employee": "吳",
-      "start": "10:00",
-      "end": "09:00",
+      "employee": "吳佳蓁",
+      "start": "09:00",
+      "end": "05:30",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "象棋卜卦公益活動",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-03",
@@ -152,12 +269,12 @@
       "day": 3,
       "weekday": "三",
       "employee": "林奕廷",
-      "start": "23:30",
-      "end": "18:30",
+      "start": "",
+      "end": "",
       "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "status": "off",
+      "note": "象棋卜卦公益活動 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-03",
@@ -169,8 +286,8 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "休 休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "象棋卜卦公益活動 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-03",
@@ -182,8 +299,8 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "象棋卜卦公益活動 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-03",
@@ -191,12 +308,12 @@
       "day": 3,
       "weekday": "三",
       "employee": "許暐妮",
-      "start": "19:00",
-      "end": "09:00",
+      "start": "",
+      "end": "",
       "hours": 0,
-      "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "status": "off",
+      "note": "象棋卜卦公益活動 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-03",
@@ -205,11 +322,11 @@
       "weekday": "三",
       "employee": "陳湘婷",
       "start": "09:00",
-      "end": "09:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "象棋卜卦公益活動",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-03",
@@ -218,11 +335,11 @@
       "weekday": "三",
       "employee": "潘奕勤",
       "start": "18:00",
-      "end": "23:30",
-      "hours": 5.5,
+      "end": "05:00",
+      "hours": 0,
       "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "note": "象棋卜卦公益活動",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-03",
@@ -230,12 +347,12 @@
       "day": 3,
       "weekday": "三",
       "employee": "蔡岱倪",
-      "start": "14:00",
-      "end": "09:00",
+      "start": "09:00",
+      "end": "05:30",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "象棋卜卦公益活動",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-03",
@@ -243,12 +360,12 @@
       "day": 3,
       "weekday": "三",
       "employee": "蔡淨馨",
-      "start": "19:00",
-      "end": "14:30",
+      "start": "14:30",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "象棋卜卦公益活動",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-03",
@@ -256,25 +373,25 @@
       "day": 3,
       "weekday": "三",
       "employee": "Bei",
-      "start": "19:00",
-      "end": "19:00",
+      "start": "10:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "象棋卜卦公益活動",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-04",
       "monthKey": "2026-06",
       "day": 4,
       "weekday": "四",
-      "employee": "吳",
-      "start": "15:00",
-      "end": "09:00",
+      "employee": "吳佳蓁",
+      "start": "",
+      "end": "",
       "hours": 0,
-      "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "status": "off",
+      "note": "流心之畫 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-04",
@@ -282,12 +399,12 @@
       "day": 4,
       "weekday": "四",
       "employee": "林奕廷",
-      "start": "15:00",
-      "end": "21:30",
-      "hours": 6.5,
+      "start": "18:30",
+      "end": "05:00",
+      "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "流心之畫",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-04",
@@ -299,8 +416,8 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "ㄧ二固定休 三 五六日都可排",
-      "sheet": "PDF 第 1 頁"
+      "note": "流心之畫 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-04",
@@ -308,12 +425,12 @@
       "day": 4,
       "weekday": "四",
       "employee": "范鈺偉",
-      "start": "20:00",
-      "end": "21:30",
-      "hours": 1.5,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "流心之畫 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-04",
@@ -321,12 +438,12 @@
       "day": 4,
       "weekday": "四",
       "employee": "許暐妮",
-      "start": "18:00",
-      "end": "09:00",
+      "start": "09:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "坊",
-      "sheet": "PDF 第 1 頁"
+      "note": "流心之畫 / 工作坊",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-04",
@@ -334,12 +451,12 @@
       "day": 4,
       "weekday": "四",
       "employee": "陳湘婷",
-      "start": "18:00",
-      "end": "10:00",
+      "start": "09:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "坊",
-      "sheet": "PDF 第 1 頁"
+      "note": "流心之畫",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-04",
@@ -347,12 +464,12 @@
       "day": 4,
       "weekday": "四",
       "employee": "潘奕勤",
-      "start": "12:30",
-      "end": "21:30",
-      "hours": 9,
-      "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "流心之畫 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-04",
@@ -360,12 +477,12 @@
       "day": 4,
       "weekday": "四",
       "employee": "蔡岱倪",
-      "start": "15:00",
-      "end": "18:00",
-      "hours": 3,
-      "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "流心之畫 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-04",
@@ -373,12 +490,12 @@
       "day": 4,
       "weekday": "四",
       "employee": "蔡淨馨",
-      "start": "23:30",
-      "end": "23:30",
+      "start": "14:30",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "流心之畫",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-04",
@@ -387,24 +504,24 @@
       "weekday": "四",
       "employee": "Bei",
       "start": "10:00",
-      "end": "13:00",
-      "hours": 3,
+      "end": "08:00",
+      "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "流心之畫",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-05",
       "monthKey": "2026-06",
       "day": 5,
       "weekday": "五",
-      "employee": "吳",
-      "start": "15:00",
-      "end": "15:00",
+      "employee": "吳佳蓁",
+      "start": "09:00",
+      "end": "05:30",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "微醺之夜",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-05",
@@ -412,194 +529,389 @@
       "day": 5,
       "weekday": "五",
       "employee": "林奕廷",
-      "start": "17:30",
-      "end": "21:30",
-      "hours": 4,
+      "start": "18:30",
+      "end": "05:30",
+      "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "微醺之夜",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-05",
       "monthKey": "2026-06",
       "day": 5,
       "weekday": "五",
+      "employee": "邱永承",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "微醺之夜 / 休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-05",
+      "monthKey": "2026-06",
+      "day": 5,
+      "weekday": "五",
+      "employee": "范鈺偉",
+      "start": "11:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "微醺之夜",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-05",
+      "monthKey": "2026-06",
+      "day": 5,
+      "weekday": "五",
+      "employee": "許暐妮",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "微醺之夜",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-05",
+      "monthKey": "2026-06",
+      "day": 5,
+      "weekday": "五",
+      "employee": "陳湘婷",
+      "start": "10:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "微醺之夜 / 工作坊",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-05",
+      "monthKey": "2026-06",
+      "day": 5,
+      "weekday": "五",
+      "employee": "潘奕勤",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "微醺之夜 / 休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-05",
+      "monthKey": "2026-06",
+      "day": 5,
+      "weekday": "五",
+      "employee": "蔡岱倪",
+      "start": "18:00",
+      "end": "22:00",
+      "hours": 4,
+      "status": "work",
+      "note": "微醺之夜",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-05",
+      "monthKey": "2026-06",
+      "day": 5,
+      "weekday": "五",
+      "employee": "蔡淨馨",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "微醺之夜 / 休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-05",
+      "monthKey": "2026-06",
+      "day": 5,
+      "weekday": "五",
+      "employee": "Bei",
+      "start": "13:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "微醺之夜",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-06",
+      "monthKey": "2026-06",
+      "day": 6,
+      "weekday": "六",
+      "employee": "吳佳蓁",
+      "start": "15:00",
+      "end": "19:00",
+      "hours": 4,
+      "status": "work",
+      "note": "DJ party",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-06",
+      "monthKey": "2026-06",
+      "day": 6,
+      "weekday": "六",
+      "employee": "林奕廷",
+      "start": "15:00",
+      "end": "06:00",
+      "hours": 0,
+      "status": "work",
+      "note": "DJ party",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-06",
+      "monthKey": "2026-06",
+      "day": 6,
+      "weekday": "六",
+      "employee": "邱永承",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "DJ party / 休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-06",
+      "monthKey": "2026-06",
+      "day": 6,
+      "weekday": "六",
+      "employee": "范鈺偉",
+      "start": "12:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "DJ party",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-06",
+      "monthKey": "2026-06",
+      "day": 6,
+      "weekday": "六",
+      "employee": "許暐妮",
+      "start": "12:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "DJ party",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-06",
+      "monthKey": "2026-06",
+      "day": 6,
+      "weekday": "六",
+      "employee": "陳湘婷",
+      "start": "10:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "DJ party",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-06",
+      "monthKey": "2026-06",
+      "day": 6,
+      "weekday": "六",
+      "employee": "潘奕勤",
+      "start": "12:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "DJ party",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-06",
+      "monthKey": "2026-06",
+      "day": 6,
+      "weekday": "六",
+      "employee": "蔡岱倪",
+      "start": "15:00",
+      "end": "19:00",
+      "hours": 4,
+      "status": "work",
+      "note": "DJ party",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-06",
+      "monthKey": "2026-06",
+      "day": 6,
+      "weekday": "六",
+      "employee": "蔡淨馨",
+      "start": "12:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "DJ party",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-06",
+      "monthKey": "2026-06",
+      "day": 6,
+      "weekday": "六",
+      "employee": "Bei",
+      "start": "12:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "DJ party",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-07",
+      "monthKey": "2026-06",
+      "day": 7,
+      "weekday": "日",
+      "employee": "吳佳蓁",
+      "start": "09:00",
+      "end": "15:00",
+      "hours": 6,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-07",
+      "monthKey": "2026-06",
+      "day": 7,
+      "weekday": "日",
+      "employee": "林奕廷",
+      "start": "17:30",
+      "end": "23:30",
+      "hours": 6,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-07",
+      "monthKey": "2026-06",
+      "day": 7,
+      "weekday": "日",
+      "employee": "邱永承",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-07",
+      "monthKey": "2026-06",
+      "day": 7,
+      "weekday": "日",
       "employee": "范鈺偉",
       "start": "09:30",
       "end": "18:30",
       "hours": 9,
       "status": "work",
       "note": "2F",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
-      "date": "2026-06-05",
+      "date": "2026-06-07",
       "monthKey": "2026-06",
-      "day": 5,
-      "weekday": "五",
+      "day": 7,
+      "weekday": "日",
       "employee": "許暐妮",
-      "start": "18:00",
-      "end": "21:30",
-      "hours": 3.5,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-05",
-      "monthKey": "2026-06",
-      "day": 5,
-      "weekday": "五",
-      "employee": "陳湘婷",
-      "start": "19:00",
-      "end": "19:00",
+      "start": "",
+      "end": "",
       "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
-      "date": "2026-06-05",
+      "date": "2026-06-07",
       "monthKey": "2026-06",
-      "day": 5,
-      "weekday": "五",
+      "day": 7,
+      "weekday": "日",
+      "employee": "陳湘婷",
+      "start": "09:00",
+      "end": "18:00",
+      "hours": 9,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-07",
+      "monthKey": "2026-06",
+      "day": 7,
+      "weekday": "日",
       "employee": "潘奕勤",
       "start": "15:30",
       "end": "23:30",
       "hours": 8,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
-      "date": "2026-06-05",
+      "date": "2026-06-07",
       "monthKey": "2026-06",
-      "day": 5,
-      "weekday": "五",
-      "employee": "蔡岱倪",
-      "start": "22:00",
-      "end": "19:00",
-      "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-05",
-      "monthKey": "2026-06",
-      "day": 5,
-      "weekday": "五",
-      "employee": "蔡淨馨",
-      "start": "12:30",
-      "end": "21:30",
-      "hours": 9,
-      "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-05",
-      "monthKey": "2026-06",
-      "day": 5,
-      "weekday": "五",
-      "employee": "Bei",
-      "start": "22:00",
-      "end": "12:30",
-      "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-06",
-      "monthKey": "2026-06",
-      "day": 6,
-      "weekday": "六",
-      "employee": "吳",
-      "start": "19:00",
-      "end": "09:00",
-      "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-06",
-      "monthKey": "2026-06",
-      "day": 6,
-      "weekday": "六",
-      "employee": "許暐妮",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-06",
-      "monthKey": "2026-06",
-      "day": 6,
-      "weekday": "六",
-      "employee": "陳湘婷",
-      "start": "09:00",
-      "end": "18:00",
-      "hours": 9,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-06",
-      "monthKey": "2026-06",
-      "day": 6,
-      "weekday": "六",
-      "employee": "潘奕勤",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "周一晚班 二五固定休 週三四中班晚班 六日皆可排班",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-06",
-      "monthKey": "2026-06",
-      "day": 6,
-      "weekday": "六",
+      "day": 7,
+      "weekday": "日",
       "employee": "蔡岱倪",
       "start": "09:00",
       "end": "15:00",
       "hours": 6,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
-      "date": "2026-06-06",
+      "date": "2026-06-07",
       "monthKey": "2026-06",
-      "day": 6,
-      "weekday": "六",
+      "day": 7,
+      "weekday": "日",
       "employee": "蔡淨馨",
       "start": "14:30",
       "end": "23:30",
       "hours": 9,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
-      "date": "2026-06-06",
+      "date": "2026-06-07",
       "monthKey": "2026-06",
-      "day": 6,
-      "weekday": "六",
+      "day": 7,
+      "weekday": "日",
       "employee": "Bei",
-      "start": "21:30",
-      "end": "10:00",
+      "start": "10:00",
+      "end": "19:00",
+      "hours": 9,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-08",
+      "monthKey": "2026-06",
+      "day": 8,
+      "weekday": "一",
+      "employee": "吳佳蓁",
+      "start": "09:00",
+      "end": "05:30",
       "hours": 0,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-08",
@@ -611,8 +923,8 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "林奕廷 休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-08",
@@ -624,21 +936,21 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "邱永承 休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-08",
       "monthKey": "2026-06",
       "day": 8,
       "weekday": "一",
-      "employee": "范鈺偉",
-      "start": "",
-      "end": "",
+      "employee": "許暐妮",
+      "start": "09:00",
+      "end": "08:00",
       "hours": 0,
-      "status": "off",
-      "note": "范鈺偉 遠端 休",
-      "sheet": "PDF 第 1 頁"
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-08",
@@ -650,8 +962,60 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "陳湘婷 休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-08",
+      "monthKey": "2026-06",
+      "day": 8,
+      "weekday": "一",
+      "employee": "潘奕勤",
+      "start": "18:30",
+      "end": "05:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-08",
+      "monthKey": "2026-06",
+      "day": 8,
+      "weekday": "一",
+      "employee": "蔡淨馨",
+      "start": "14:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-08",
+      "monthKey": "2026-06",
+      "day": 8,
+      "weekday": "一",
+      "employee": "Bei",
+      "start": "10:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-09",
+      "monthKey": "2026-06",
+      "day": 9,
+      "weekday": "二",
+      "employee": "吳佳蓁",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-09",
@@ -664,7 +1028,20 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-09",
+      "monthKey": "2026-06",
+      "day": 9,
+      "weekday": "二",
+      "employee": "邱永承",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-09",
@@ -676,8 +1053,8 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "休 遠端",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-09",
@@ -690,7 +1067,20 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-09",
+      "monthKey": "2026-06",
+      "day": 9,
+      "weekday": "二",
+      "employee": "陳湘婷",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-09",
@@ -703,20 +1093,7 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-09",
-      "monthKey": "2026-06",
-      "day": 9,
-      "weekday": "二",
-      "employee": "蔡岱倪",
-      "start": "13:00",
-      "end": "09:00",
-      "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-09",
@@ -729,7 +1106,7 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-09",
@@ -737,25 +1114,25 @@
       "day": 9,
       "weekday": "二",
       "employee": "Bei",
-      "start": "19:00",
-      "end": "11:00",
+      "start": "11:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-10",
       "monthKey": "2026-06",
       "day": 10,
       "weekday": "三",
-      "employee": "吳",
+      "employee": "吳佳蓁",
       "start": "",
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "流心之畫 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-10",
@@ -763,12 +1140,12 @@
       "day": 10,
       "weekday": "三",
       "employee": "林奕廷",
-      "start": "23:00",
-      "end": "18:30",
+      "start": "",
+      "end": "",
       "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "status": "off",
+      "note": "流心之畫 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-10",
@@ -776,12 +1153,12 @@
       "day": 10,
       "weekday": "三",
       "employee": "邱永承",
-      "start": "23:30",
-      "end": "23:30",
+      "start": "18:30",
+      "end": "05:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "流心之畫",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-10",
@@ -789,12 +1166,12 @@
       "day": 10,
       "weekday": "三",
       "employee": "范鈺偉",
-      "start": "11:00",
-      "end": "09:30",
+      "start": "",
+      "end": "",
       "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "status": "off",
+      "note": "流心之畫 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-10",
@@ -803,11 +1180,11 @@
       "weekday": "三",
       "employee": "許暐妮",
       "start": "09:00",
-      "end": "18:00",
-      "hours": 9,
+      "end": "08:00",
+      "hours": 0,
       "status": "work",
-      "note": "坊 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "流心之畫 / 工作坊",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-10",
@@ -815,12 +1192,12 @@
       "day": 10,
       "weekday": "三",
       "employee": "陳湘婷",
-      "start": "18:00",
-      "end": "18:00",
+      "start": "09:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "流心之畫",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-10",
@@ -828,25 +1205,12 @@
       "day": 10,
       "weekday": "三",
       "employee": "潘奕勤",
-      "start": "18:30",
-      "end": "23:30",
-      "hours": 5,
-      "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-10",
-      "monthKey": "2026-06",
-      "day": 10,
-      "weekday": "三",
-      "employee": "蔡岱倪",
-      "start": "15:00",
-      "end": "15:00",
+      "start": "",
+      "end": "",
       "hours": 0,
-      "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "status": "off",
+      "note": "流心之畫 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-10",
@@ -855,11 +1219,11 @@
       "weekday": "三",
       "employee": "蔡淨馨",
       "start": "14:30",
-      "end": "23:30",
-      "hours": 9,
+      "end": "08:00",
+      "hours": 0,
       "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "note": "流心之畫",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-10",
@@ -867,25 +1231,25 @@
       "day": 10,
       "weekday": "三",
       "employee": "Bei",
-      "start": "20:00",
-      "end": "11:00",
+      "start": "11:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "流心之畫",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-11",
       "monthKey": "2026-06",
       "day": 11,
       "weekday": "四",
-      "employee": "吳",
-      "start": "15:00",
-      "end": "09:00",
+      "employee": "吳佳蓁",
+      "start": "09:00",
+      "end": "05:30",
       "hours": 0,
       "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-11",
@@ -893,12 +1257,12 @@
       "day": 11,
       "weekday": "四",
       "employee": "林奕廷",
-      "start": "23:30",
-      "end": "18:30",
+      "start": "18:00",
+      "end": "05:00",
       "hours": 0,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-11",
@@ -906,25 +1270,12 @@
       "day": 11,
       "weekday": "四",
       "employee": "邱永承",
-      "start": "10:00",
-      "end": "16:00",
-      "hours": 6,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-11",
-      "monthKey": "2026-06",
-      "day": 11,
-      "weekday": "四",
-      "employee": "范鈺偉",
       "start": "18:30",
-      "end": "09:30",
+      "end": "05:00",
       "hours": 0,
       "status": "work",
-      "note": "2F",
-      "sheet": "PDF 第 1 頁"
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-11",
@@ -932,12 +1283,12 @@
       "day": 11,
       "weekday": "四",
       "employee": "許暐妮",
-      "start": "09:00",
-      "end": "18:00",
-      "hours": 9,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-11",
@@ -945,12 +1296,25 @@
       "day": 11,
       "weekday": "四",
       "employee": "陳湘婷",
-      "start": "10:00",
-      "end": "19:00",
-      "hours": 9,
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
       "status": "work",
-      "note": "坊",
-      "sheet": "PDF 第 1 頁"
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-11",
+      "monthKey": "2026-06",
+      "day": 11,
+      "weekday": "四",
+      "employee": "潘奕勤",
+      "start": "18:30",
+      "end": "05:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-11",
@@ -958,12 +1322,25 @@
       "day": 11,
       "weekday": "四",
       "employee": "蔡岱倪",
-      "start": "19:00",
-      "end": "13:30",
-      "hours": 0,
+      "start": "09:00",
+      "end": "13:00",
+      "hours": 4,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-11",
+      "monthKey": "2026-06",
+      "day": 11,
+      "weekday": "四",
+      "employee": "蔡淨馨",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-11",
@@ -971,25 +1348,25 @@
       "day": 11,
       "weekday": "四",
       "employee": "Bei",
-      "start": "20:00",
-      "end": "11:00",
+      "start": "11:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-12",
       "monthKey": "2026-06",
       "day": 12,
       "weekday": "五",
-      "employee": "吳",
-      "start": "15:00",
-      "end": "09:00",
+      "employee": "吳佳蓁",
+      "start": "",
+      "end": "",
       "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "status": "off",
+      "note": "微醺之夜 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-12",
@@ -997,12 +1374,12 @@
       "day": 12,
       "weekday": "五",
       "employee": "林奕廷",
-      "start": "",
-      "end": "",
+      "start": "18:30",
+      "end": "05:00",
       "hours": 0,
-      "status": "off",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "status": "work",
+      "note": "微醺之夜",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-12",
@@ -1010,12 +1387,12 @@
       "day": 12,
       "weekday": "五",
       "employee": "邱永承",
-      "start": "15:30",
-      "end": "23:30",
-      "hours": 8,
+      "start": "10:00",
+      "end": "05:30",
+      "hours": 0,
       "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "note": "微醺之夜",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-12",
@@ -1023,12 +1400,12 @@
       "day": 12,
       "weekday": "五",
       "employee": "范鈺偉",
-      "start": "18:30",
-      "end": "24:00",
-      "hours": 5.5,
+      "start": "11:00",
+      "end": "08:00",
+      "hours": 0,
       "status": "work",
-      "note": "2F",
-      "sheet": "PDF 第 1 頁"
+      "note": "微醺之夜",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-12",
@@ -1037,11 +1414,11 @@
       "weekday": "五",
       "employee": "許暐妮",
       "start": "09:00",
-      "end": "09:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "微醺之夜",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-12",
@@ -1049,12 +1426,12 @@
       "day": 12,
       "weekday": "五",
       "employee": "陳湘婷",
-      "start": "09:00",
-      "end": "09:00",
+      "start": "10:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "微醺之夜 / 工作坊",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-12",
@@ -1062,12 +1439,25 @@
       "day": 12,
       "weekday": "五",
       "employee": "潘奕勤",
-      "start": "",
-      "end": "",
+      "start": "18:30",
+      "end": "05:30",
       "hours": 0,
-      "status": "off",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "status": "work",
+      "note": "微醺之夜",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-12",
+      "monthKey": "2026-06",
+      "day": 12,
+      "weekday": "五",
+      "employee": "蔡岱倪",
+      "start": "09:00",
+      "end": "05:30",
+      "hours": 0,
+      "status": "work",
+      "note": "微醺之夜",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-12",
@@ -1076,11 +1466,11 @@
       "weekday": "五",
       "employee": "蔡淨馨",
       "start": "15:30",
-      "end": "14:30",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "微醺之夜",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-12",
@@ -1088,25 +1478,38 @@
       "day": 12,
       "weekday": "五",
       "employee": "Bei",
-      "start": "20:00",
-      "end": "20:00",
+      "start": "11:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "微醺之夜",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-13",
       "monthKey": "2026-06",
       "day": 13,
       "weekday": "六",
-      "employee": "吳",
-      "start": "15:00",
-      "end": "22:00",
-      "hours": 7,
+      "employee": "吳佳蓁",
+      "start": "09:00",
+      "end": "05:30",
+      "hours": 0,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-13",
+      "monthKey": "2026-06",
+      "day": 13,
+      "weekday": "六",
+      "employee": "林奕廷",
+      "start": "18:30",
+      "end": "05:30",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-13",
@@ -1118,8 +1521,47 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "ㄧ二固定休 三 五六日都可排",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-13",
+      "monthKey": "2026-06",
+      "day": 13,
+      "weekday": "六",
+      "employee": "范鈺偉",
+      "start": "09:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "2F",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-13",
+      "monthKey": "2026-06",
+      "day": 13,
+      "weekday": "六",
+      "employee": "許暐妮",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-13",
+      "monthKey": "2026-06",
+      "day": 13,
+      "weekday": "六",
+      "employee": "陳湘婷",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-13",
@@ -1127,12 +1569,38 @@
       "day": 13,
       "weekday": "六",
       "employee": "潘奕勤",
+      "start": "18:30",
+      "end": "05:30",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-13",
+      "monthKey": "2026-06",
+      "day": 13,
+      "weekday": "六",
+      "employee": "蔡岱倪",
       "start": "",
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "周一晚班 二五固定休 週三四中班晚班 六日皆可排班",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-13",
+      "monthKey": "2026-06",
+      "day": 13,
+      "weekday": "六",
+      "employee": "蔡淨馨",
+      "start": "15:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-13",
@@ -1141,11 +1609,128 @@
       "weekday": "六",
       "employee": "Bei",
       "start": "11:00",
-      "end": "20:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-14",
+      "monthKey": "2026-06",
+      "day": 14,
+      "weekday": "日",
+      "employee": "吳佳蓁",
+      "start": "09:00",
+      "end": "15:00",
+      "hours": 6,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-14",
+      "monthKey": "2026-06",
+      "day": 14,
+      "weekday": "日",
+      "employee": "林奕廷",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-14",
+      "monthKey": "2026-06",
+      "day": 14,
+      "weekday": "日",
+      "employee": "邱永承",
+      "start": "15:30",
+      "end": "23:30",
+      "hours": 8,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-14",
+      "monthKey": "2026-06",
+      "day": 14,
+      "weekday": "日",
+      "employee": "范鈺偉",
+      "start": "09:30",
+      "end": "18:30",
+      "hours": 9,
+      "status": "work",
+      "note": "2F",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-14",
+      "monthKey": "2026-06",
+      "day": 14,
+      "weekday": "日",
+      "employee": "許暐妮",
+      "start": "09:00",
+      "end": "18:00",
       "hours": 9,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-14",
+      "monthKey": "2026-06",
+      "day": 14,
+      "weekday": "日",
+      "employee": "陳湘婷",
+      "start": "09:00",
+      "end": "18:00",
+      "hours": 9,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-14",
+      "monthKey": "2026-06",
+      "day": 14,
+      "weekday": "日",
+      "employee": "潘奕勤",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-14",
+      "monthKey": "2026-06",
+      "day": 14,
+      "weekday": "日",
+      "employee": "蔡岱倪",
+      "start": "15:00",
+      "end": "19:00",
+      "hours": 4,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-14",
+      "monthKey": "2026-06",
+      "day": 14,
+      "weekday": "日",
+      "employee": "蔡淨馨",
+      "start": "14:30",
+      "end": "23:30",
+      "hours": 9,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-14",
@@ -1158,7 +1743,20 @@
       "hours": 9,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-15",
+      "monthKey": "2026-06",
+      "day": 15,
+      "weekday": "一",
+      "employee": "吳佳蓁",
+      "start": "09:00",
+      "end": "05:30",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-15",
@@ -1170,8 +1768,8 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "邱永承 休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-15",
@@ -1183,8 +1781,21 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "范鈺偉 休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-15",
+      "monthKey": "2026-06",
+      "day": 15,
+      "weekday": "一",
+      "employee": "許暐妮",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-15",
@@ -1196,8 +1807,99 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "陳湘婷 休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-15",
+      "monthKey": "2026-06",
+      "day": 15,
+      "weekday": "一",
+      "employee": "潘奕勤",
+      "start": "18:30",
+      "end": "05:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-15",
+      "monthKey": "2026-06",
+      "day": 15,
+      "weekday": "一",
+      "employee": "蔡岱倪",
+      "start": "15:00",
+      "end": "19:00",
+      "hours": 4,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-15",
+      "monthKey": "2026-06",
+      "day": 15,
+      "weekday": "一",
+      "employee": "蔡淨馨",
+      "start": "14:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-15",
+      "monthKey": "2026-06",
+      "day": 15,
+      "weekday": "一",
+      "employee": "Bei",
+      "start": "10:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-16",
+      "monthKey": "2026-06",
+      "day": 16,
+      "weekday": "二",
+      "employee": "吳佳蓁",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-16",
+      "monthKey": "2026-06",
+      "day": 16,
+      "weekday": "二",
+      "employee": "邱永承",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-16",
+      "monthKey": "2026-06",
+      "day": 16,
+      "weekday": "二",
+      "employee": "范鈺偉",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-16",
@@ -1210,7 +1912,20 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-16",
+      "monthKey": "2026-06",
+      "day": 16,
+      "weekday": "二",
+      "employee": "陳湘婷",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-16",
@@ -1223,7 +1938,7 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-16",
@@ -1236,7 +1951,7 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-16",
@@ -1249,7 +1964,7 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-16",
@@ -1257,25 +1972,25 @@
       "day": 16,
       "weekday": "二",
       "employee": "Bei",
-      "start": "19:00",
-      "end": "11:00",
+      "start": "11:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-17",
       "monthKey": "2026-06",
       "day": 17,
       "weekday": "三",
-      "employee": "吳",
-      "start": "",
-      "end": "",
+      "employee": "吳佳蓁",
+      "start": "09:00",
+      "end": "05:30",
       "hours": 0,
-      "status": "off",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-17",
@@ -1283,25 +1998,12 @@
       "day": 17,
       "weekday": "三",
       "employee": "邱永承",
-      "start": "",
-      "end": "",
+      "start": "18:30",
+      "end": "05:00",
       "hours": 0,
-      "status": "off",
-      "note": "休 休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-17",
-      "monthKey": "2026-06",
-      "day": 17,
-      "weekday": "三",
-      "employee": "范鈺偉",
-      "start": "11:00",
-      "end": "20:00",
-      "hours": 9,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-17",
@@ -1314,7 +2016,7 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-17",
@@ -1322,12 +2024,12 @@
       "day": 17,
       "weekday": "三",
       "employee": "陳湘婷",
-      "start": "18:00",
-      "end": "09:00",
+      "start": "09:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-17",
@@ -1340,7 +2042,7 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-17",
@@ -1353,7 +2055,7 @@
       "hours": 4,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-17",
@@ -1362,11 +2064,11 @@
       "weekday": "三",
       "employee": "蔡淨馨",
       "start": "14:30",
-      "end": "23:30",
-      "hours": 9,
+      "end": "08:00",
+      "hours": 0,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-17",
@@ -1379,20 +2081,20 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-18",
       "monthKey": "2026-06",
       "day": 18,
       "weekday": "四",
-      "employee": "吳",
-      "start": "15:00",
-      "end": "09:00",
+      "employee": "吳佳蓁",
+      "start": "09:00",
+      "end": "05:30",
       "hours": 0,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-18",
@@ -1405,20 +2107,7 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-18",
-      "monthKey": "2026-06",
-      "day": 18,
-      "weekday": "四",
-      "employee": "范鈺偉",
-      "start": "09:30",
-      "end": "18:30",
-      "hours": 9,
-      "status": "work",
-      "note": "2F",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-18",
@@ -1426,12 +2115,12 @@
       "day": 18,
       "weekday": "四",
       "employee": "許暐妮",
-      "start": "19:00",
-      "end": "10:00",
+      "start": "10:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-18",
@@ -1439,12 +2128,12 @@
       "day": 18,
       "weekday": "四",
       "employee": "陳湘婷",
-      "start": "18:00",
-      "end": "09:00",
+      "start": "09:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-18",
@@ -1452,12 +2141,12 @@
       "day": 18,
       "weekday": "四",
       "employee": "潘奕勤",
-      "start": "23:30",
-      "end": "18:30",
+      "start": "18:30",
+      "end": "05:00",
       "hours": 0,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-18",
@@ -1470,7 +2159,7 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-18",
@@ -1479,11 +2168,11 @@
       "weekday": "四",
       "employee": "蔡淨馨",
       "start": "14:30",
-      "end": "23:30",
-      "hours": 9,
+      "end": "08:00",
+      "hours": 0,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-18",
@@ -1495,21 +2184,21 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "休 休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-19",
       "monthKey": "2026-06",
       "day": 19,
       "weekday": "五",
-      "employee": "吳",
-      "start": "15:00",
-      "end": "15:00",
+      "employee": "吳佳蓁",
+      "start": "09:00",
+      "end": "05:30",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-19",
@@ -1517,12 +2206,12 @@
       "day": 19,
       "weekday": "五",
       "employee": "邱永承",
-      "start": "23:30",
-      "end": "12:00",
+      "start": "",
+      "end": "",
       "hours": 0,
-      "status": "work",
-      "note": "ㄧ二固定休 三 五六日都可排",
-      "sheet": "PDF 第 1 頁"
+      "status": "off",
+      "note": "粽夏甜食 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-19",
@@ -1530,12 +2219,12 @@
       "day": 19,
       "weekday": "五",
       "employee": "范鈺偉",
-      "start": "09:30",
-      "end": "24:00",
-      "hours": 14.5,
+      "start": "11:00",
+      "end": "08:00",
+      "hours": 0,
       "status": "work",
-      "note": "2F",
-      "sheet": "PDF 第 1 頁"
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-19",
@@ -1543,12 +2232,12 @@
       "day": 19,
       "weekday": "五",
       "employee": "許暐妮",
-      "start": "19:00",
-      "end": "19:00",
+      "start": "10:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-19",
@@ -1556,12 +2245,12 @@
       "day": 19,
       "weekday": "五",
       "employee": "陳湘婷",
-      "start": "18:00",
-      "end": "18:00",
+      "start": "09:00",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-19",
@@ -1569,12 +2258,12 @@
       "day": 19,
       "weekday": "五",
       "employee": "潘奕勤",
-      "start": "",
-      "end": "",
+      "start": "18:30",
+      "end": "05:30",
       "hours": 0,
-      "status": "off",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "status": "work",
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-19",
@@ -1582,12 +2271,12 @@
       "day": 19,
       "weekday": "五",
       "employee": "蔡岱倪",
-      "start": "22:00",
+      "start": "18:00",
       "end": "22:00",
-      "hours": 0,
+      "hours": 4,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-19",
@@ -1596,11 +2285,11 @@
       "weekday": "五",
       "employee": "蔡淨馨",
       "start": "15:30",
-      "end": "15:30",
+      "end": "08:00",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-19",
@@ -1612,21 +2301,47 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "note": "粽夏甜食 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-20",
       "monthKey": "2026-06",
       "day": 20,
       "weekday": "六",
-      "employee": "吳",
+      "employee": "吳佳蓁",
       "start": "09:00",
-      "end": "09:00",
+      "end": "05:30",
       "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-20",
+      "monthKey": "2026-06",
+      "day": 20,
+      "weekday": "六",
+      "employee": "邱永承",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "粽夏甜食 / 休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-20",
+      "monthKey": "2026-06",
+      "day": 20,
+      "weekday": "六",
+      "employee": "范鈺偉",
+      "start": "09:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "粽夏甜食 / 2F",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-20",
@@ -1635,11 +2350,11 @@
       "weekday": "六",
       "employee": "許暐妮",
       "start": "10:00",
-      "end": "19:00",
-      "hours": 9,
+      "end": "08:00",
+      "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-20",
@@ -1648,11 +2363,11 @@
       "weekday": "六",
       "employee": "陳湘婷",
       "start": "09:00",
-      "end": "18:00",
-      "hours": 9,
+      "end": "08:00",
+      "hours": 0,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-20",
@@ -1660,12 +2375,12 @@
       "day": 20,
       "weekday": "六",
       "employee": "潘奕勤",
-      "start": "23:30",
-      "end": "22:00",
+      "start": "",
+      "end": "",
       "hours": 0,
-      "status": "work",
-      "note": "周一晚班 二五固定休 週三四中班晚班 六日皆可排班",
-      "sheet": "PDF 第 1 頁"
+      "status": "off",
+      "note": "粽夏甜食 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-20",
@@ -1673,25 +2388,168 @@
       "day": 20,
       "weekday": "六",
       "employee": "蔡岱倪",
-      "start": "09:00",
-      "end": "21:30",
-      "hours": 12.5,
+      "start": "18:00",
+      "end": "22:00",
+      "hours": 4,
       "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-20",
+      "monthKey": "2026-06",
+      "day": 20,
+      "weekday": "六",
+      "employee": "蔡淨馨",
+      "start": "15:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-20",
+      "monthKey": "2026-06",
+      "day": 20,
+      "weekday": "六",
+      "employee": "Bei",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "粽夏甜食 / 休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-21",
+      "monthKey": "2026-06",
+      "day": 21,
+      "weekday": "日",
+      "employee": "吳佳蓁",
+      "start": "09:00",
+      "end": "15:00",
+      "hours": 6,
+      "status": "work",
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-21",
+      "monthKey": "2026-06",
+      "day": 21,
+      "weekday": "日",
+      "employee": "邱永承",
+      "start": "15:30",
+      "end": "23:30",
+      "hours": 8,
+      "status": "work",
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-21",
+      "monthKey": "2026-06",
+      "day": 21,
+      "weekday": "日",
+      "employee": "范鈺偉",
+      "start": "09:30",
+      "end": "18:30",
+      "hours": 9,
+      "status": "work",
+      "note": "粽夏甜食 / 2F",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-21",
+      "monthKey": "2026-06",
+      "day": 21,
+      "weekday": "日",
+      "employee": "許暐妮",
+      "start": "10:00",
+      "end": "19:00",
+      "hours": 9,
+      "status": "work",
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-21",
+      "monthKey": "2026-06",
+      "day": 21,
+      "weekday": "日",
+      "employee": "陳湘婷",
+      "start": "09:00",
+      "end": "18:00",
+      "hours": 9,
+      "status": "work",
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-21",
+      "monthKey": "2026-06",
+      "day": 21,
+      "weekday": "日",
+      "employee": "潘奕勤",
+      "start": "15:30",
+      "end": "23:30",
+      "hours": 8,
+      "status": "work",
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-21",
+      "monthKey": "2026-06",
+      "day": 21,
+      "weekday": "日",
+      "employee": "蔡岱倪",
+      "start": "09:00",
+      "end": "15:00",
+      "hours": 6,
+      "status": "work",
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-21",
+      "monthKey": "2026-06",
+      "day": 21,
+      "weekday": "日",
+      "employee": "蔡淨馨",
+      "start": "14:30",
+      "end": "23:30",
+      "hours": 9,
+      "status": "work",
+      "note": "粽夏甜食",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-21",
+      "monthKey": "2026-06",
+      "day": 21,
+      "weekday": "日",
+      "employee": "Bei",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "粽夏甜食 / 休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-22",
       "monthKey": "2026-06",
       "day": 22,
       "weekday": "一",
-      "employee": "休備",
-      "start": "",
-      "end": "",
+      "employee": "吳佳蓁",
+      "start": "09:00",
+      "end": "05:30",
       "hours": 0,
-      "status": "off",
-      "note": "休備",
-      "sheet": "PDF 第 1 頁"
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-22",
@@ -1703,8 +2561,8 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "邱永承 休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-22",
@@ -1716,8 +2574,21 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "范鈺偉 休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-22",
+      "monthKey": "2026-06",
+      "day": 22,
+      "weekday": "一",
+      "employee": "許暐妮",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-22",
@@ -1729,21 +2600,34 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "陳湘婷 休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-22",
       "monthKey": "2026-06",
       "day": 22,
       "weekday": "一",
-      "employee": "蔡岱倪",
-      "start": "",
-      "end": "",
+      "employee": "潘奕勤",
+      "start": "18:00",
+      "end": "05:00",
       "hours": 0,
-      "status": "off",
-      "note": "蔡岱倪 休 休",
-      "sheet": "PDF 第 1 頁"
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-22",
+      "monthKey": "2026-06",
+      "day": 22,
+      "weekday": "一",
+      "employee": "蔡淨馨",
+      "start": "14:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-22",
@@ -1755,8 +2639,60 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "Bei 休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-23",
+      "monthKey": "2026-06",
+      "day": 23,
+      "weekday": "二",
+      "employee": "吳佳蓁",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-23",
+      "monthKey": "2026-06",
+      "day": 23,
+      "weekday": "二",
+      "employee": "林奕廷",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-23",
+      "monthKey": "2026-06",
+      "day": 23,
+      "weekday": "二",
+      "employee": "邱永承",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-23",
+      "monthKey": "2026-06",
+      "day": 23,
+      "weekday": "二",
+      "employee": "范鈺偉",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-23",
@@ -1769,7 +2705,20 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-23",
+      "monthKey": "2026-06",
+      "day": 23,
+      "weekday": "二",
+      "employee": "陳湘婷",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-23",
@@ -1782,7 +2731,7 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-23",
@@ -1795,7 +2744,7 @@
       "hours": 0,
       "status": "off",
       "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-23",
@@ -1807,21 +2756,21 @@
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "休 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-24",
       "monthKey": "2026-06",
       "day": 24,
       "weekday": "三",
-      "employee": "吳",
+      "employee": "吳佳蓁",
       "start": "",
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "休 考 休",
-      "sheet": "PDF 第 1 頁"
+      "note": "休備考",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-24",
@@ -1829,525 +2778,815 @@
       "day": 24,
       "weekday": "三",
       "employee": "邱永承",
-      "start": "23:30",
-      "end": "18:30",
+      "start": "18:30",
+      "end": "05:00",
       "hours": 0,
       "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
+      "note": "",
+      "sheet": "工作表1"
     },
     {
       "date": "2026-06-24",
       "monthKey": "2026-06",
       "day": 24,
       "weekday": "三",
+      "employee": "許暐妮",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-24",
+      "monthKey": "2026-06",
+      "day": 24,
+      "weekday": "三",
+      "employee": "陳湘婷",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-24",
+      "monthKey": "2026-06",
+      "day": 24,
+      "weekday": "三",
+      "employee": "潘奕勤",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-24",
+      "monthKey": "2026-06",
+      "day": 24,
+      "weekday": "三",
+      "employee": "蔡淨馨",
+      "start": "14:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-24",
+      "monthKey": "2026-06",
+      "day": 24,
+      "weekday": "三",
+      "employee": "Bei",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-25",
+      "monthKey": "2026-06",
+      "day": 25,
+      "weekday": "四",
+      "employee": "吳佳蓁",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-25",
+      "monthKey": "2026-06",
+      "day": 25,
+      "weekday": "四",
+      "employee": "邱永承",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-25",
+      "monthKey": "2026-06",
+      "day": 25,
+      "weekday": "四",
+      "employee": "許暐妮",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-25",
+      "monthKey": "2026-06",
+      "day": 25,
+      "weekday": "四",
+      "employee": "陳湘婷",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-25",
+      "monthKey": "2026-06",
+      "day": 25,
+      "weekday": "四",
+      "employee": "潘奕勤",
+      "start": "14:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-25",
+      "monthKey": "2026-06",
+      "day": 25,
+      "weekday": "四",
+      "employee": "蔡淨馨",
+      "start": "14:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-25",
+      "monthKey": "2026-06",
+      "day": 25,
+      "weekday": "四",
+      "employee": "Bei",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "補休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-26",
+      "monthKey": "2026-06",
+      "day": 26,
+      "weekday": "五",
+      "employee": "吳佳蓁",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-26",
+      "monthKey": "2026-06",
+      "day": 26,
+      "weekday": "五",
+      "employee": "邱永承",
+      "start": "18:30",
+      "end": "05:30",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-26",
+      "monthKey": "2026-06",
+      "day": 26,
+      "weekday": "五",
       "employee": "范鈺偉",
+      "start": "11:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-26",
+      "monthKey": "2026-06",
+      "day": 26,
+      "weekday": "五",
+      "employee": "許暐妮",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-26",
+      "monthKey": "2026-06",
+      "day": 26,
+      "weekday": "五",
+      "employee": "陳湘婷",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-26",
+      "monthKey": "2026-06",
+      "day": 26,
+      "weekday": "五",
+      "employee": "潘奕勤",
+      "start": "18:30",
+      "end": "05:30",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-26",
+      "monthKey": "2026-06",
+      "day": 26,
+      "weekday": "五",
+      "employee": "蔡岱倪",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-26",
+      "monthKey": "2026-06",
+      "day": 26,
+      "weekday": "五",
+      "employee": "蔡淨馨",
+      "start": "15:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-26",
+      "monthKey": "2026-06",
+      "day": 26,
+      "weekday": "五",
+      "employee": "Bei",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "特休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-27",
+      "monthKey": "2026-06",
+      "day": 27,
+      "weekday": "六",
+      "employee": "吳佳蓁",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-27",
+      "monthKey": "2026-06",
+      "day": 27,
+      "weekday": "六",
+      "employee": "邱永承",
+      "start": "15:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-27",
+      "monthKey": "2026-06",
+      "day": 27,
+      "weekday": "六",
+      "employee": "范鈺偉",
+      "start": "09:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "2F",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-27",
+      "monthKey": "2026-06",
+      "day": 27,
+      "weekday": "六",
+      "employee": "許暐妮",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-27",
+      "monthKey": "2026-06",
+      "day": 27,
+      "weekday": "六",
+      "employee": "陳湘婷",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-27",
+      "monthKey": "2026-06",
+      "day": 27,
+      "weekday": "六",
+      "employee": "潘奕勤",
+      "start": "15:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-27",
+      "monthKey": "2026-06",
+      "day": 27,
+      "weekday": "六",
+      "employee": "蔡岱倪",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-27",
+      "monthKey": "2026-06",
+      "day": 27,
+      "weekday": "六",
+      "employee": "蔡淨馨",
+      "start": "15:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-27",
+      "monthKey": "2026-06",
+      "day": 27,
+      "weekday": "六",
+      "employee": "Bei",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "特休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-28",
+      "monthKey": "2026-06",
+      "day": 28,
+      "weekday": "日",
+      "employee": "吳佳蓁",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-28",
+      "monthKey": "2026-06",
+      "day": 28,
+      "weekday": "日",
+      "employee": "邱永承",
+      "start": "15:30",
+      "end": "23:30",
+      "hours": 8,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-28",
+      "monthKey": "2026-06",
+      "day": 28,
+      "weekday": "日",
+      "employee": "范鈺偉",
+      "start": "09:30",
+      "end": "18:30",
+      "hours": 9,
+      "status": "work",
+      "note": "2F",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-28",
+      "monthKey": "2026-06",
+      "day": 28,
+      "weekday": "日",
+      "employee": "許暐妮",
+      "start": "09:00",
+      "end": "18:00",
+      "hours": 9,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-28",
+      "monthKey": "2026-06",
+      "day": 28,
+      "weekday": "日",
+      "employee": "陳湘婷",
+      "start": "09:00",
+      "end": "18:00",
+      "hours": 9,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-28",
+      "monthKey": "2026-06",
+      "day": 28,
+      "weekday": "日",
+      "employee": "潘奕勤",
+      "start": "15:30",
+      "end": "23:30",
+      "hours": 8,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-28",
+      "monthKey": "2026-06",
+      "day": 28,
+      "weekday": "日",
+      "employee": "蔡淨馨",
+      "start": "14:30",
+      "end": "23:30",
+      "hours": 9,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-28",
+      "monthKey": "2026-06",
+      "day": 28,
+      "weekday": "日",
+      "employee": "Bei",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "特休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-29",
+      "monthKey": "2026-06",
+      "day": 29,
+      "weekday": "一",
+      "employee": "吳佳蓁",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-29",
+      "monthKey": "2026-06",
+      "day": 29,
+      "weekday": "一",
+      "employee": "邱永承",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-29",
+      "monthKey": "2026-06",
+      "day": 29,
+      "weekday": "一",
+      "employee": "范鈺偉",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-29",
+      "monthKey": "2026-06",
+      "day": 29,
+      "weekday": "一",
+      "employee": "許暐妮",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-29",
+      "monthKey": "2026-06",
+      "day": 29,
+      "weekday": "一",
+      "employee": "陳湘婷",
+      "start": "09:00",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-29",
+      "monthKey": "2026-06",
+      "day": 29,
+      "weekday": "一",
+      "employee": "潘奕勤",
+      "start": "18:00",
+      "end": "05:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-29",
+      "monthKey": "2026-06",
+      "day": 29,
+      "weekday": "一",
+      "employee": "蔡淨馨",
+      "start": "14:30",
+      "end": "08:00",
+      "hours": 0,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-29",
+      "monthKey": "2026-06",
+      "day": 29,
+      "weekday": "一",
+      "employee": "Bei",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-30",
+      "monthKey": "2026-06",
+      "day": 30,
+      "weekday": "二",
+      "employee": "吳佳蓁",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-30",
+      "monthKey": "2026-06",
+      "day": 30,
+      "weekday": "二",
+      "employee": "林奕廷",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-30",
+      "monthKey": "2026-06",
+      "day": 30,
+      "weekday": "二",
+      "employee": "邱永承",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-30",
+      "monthKey": "2026-06",
+      "day": 30,
+      "weekday": "二",
+      "employee": "范鈺偉",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-30",
+      "monthKey": "2026-06",
+      "day": 30,
+      "weekday": "二",
+      "employee": "許暐妮",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-30",
+      "monthKey": "2026-06",
+      "day": 30,
+      "weekday": "二",
+      "employee": "陳湘婷",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-30",
+      "monthKey": "2026-06",
+      "day": 30,
+      "weekday": "二",
+      "employee": "潘奕勤",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-30",
+      "monthKey": "2026-06",
+      "day": 30,
+      "weekday": "二",
+      "employee": "蔡岱倪",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-30",
+      "monthKey": "2026-06",
+      "day": 30,
+      "weekday": "二",
+      "employee": "蔡淨馨",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-06-30",
+      "monthKey": "2026-06",
+      "day": 30,
+      "weekday": "二",
+      "employee": "Bei",
       "start": "11:00",
       "end": "20:00",
       "hours": 9,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-24",
-      "monthKey": "2026-06",
-      "day": 24,
-      "weekday": "三",
-      "employee": "許暐妮",
-      "start": "09:00",
-      "end": "18:00",
-      "hours": 9,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-24",
-      "monthKey": "2026-06",
-      "day": 24,
-      "weekday": "三",
-      "employee": "陳湘婷",
-      "start": "18:00",
-      "end": "09:00",
-      "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-24",
-      "monthKey": "2026-06",
-      "day": 24,
-      "weekday": "三",
-      "employee": "潘奕勤",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-24",
-      "monthKey": "2026-06",
-      "day": 24,
-      "weekday": "三",
-      "employee": "蔡淨馨",
-      "start": "14:30",
-      "end": "23:30",
-      "hours": 9,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-24",
-      "monthKey": "2026-06",
-      "day": 24,
-      "weekday": "三",
-      "employee": "Bei",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "特休 特休 特休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-25",
-      "monthKey": "2026-06",
-      "day": 25,
-      "weekday": "四",
-      "employee": "吳",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "休 休 休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-25",
-      "monthKey": "2026-06",
-      "day": 25,
-      "weekday": "四",
-      "employee": "范鈺偉",
-      "start": "09:30",
-      "end": "18:30",
-      "hours": 9,
-      "status": "work",
-      "note": "2F",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-25",
-      "monthKey": "2026-06",
-      "day": 25,
-      "weekday": "四",
-      "employee": "許暐妮",
-      "start": "09:00",
-      "end": "18:00",
-      "hours": 9,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-25",
-      "monthKey": "2026-06",
-      "day": 25,
-      "weekday": "四",
-      "employee": "陳湘婷",
-      "start": "18:00",
-      "end": "09:00",
-      "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-25",
-      "monthKey": "2026-06",
-      "day": 25,
-      "weekday": "四",
-      "employee": "潘奕勤",
-      "start": "23:30",
-      "end": "18:30",
-      "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-25",
-      "monthKey": "2026-06",
-      "day": 25,
-      "weekday": "四",
-      "employee": "蔡淨馨",
-      "start": "14:30",
-      "end": "23:30",
-      "hours": 9,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-26",
-      "monthKey": "2026-06",
-      "day": 26,
-      "weekday": "五",
-      "employee": "范鈺偉",
-      "start": "09:30",
-      "end": "18:30",
-      "hours": 9,
-      "status": "work",
-      "note": "2F",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-26",
-      "monthKey": "2026-06",
-      "day": 26,
-      "weekday": "五",
-      "employee": "許暐妮",
-      "start": "09:00",
-      "end": "18:00",
-      "hours": 9,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-26",
-      "monthKey": "2026-06",
-      "day": 26,
-      "weekday": "五",
-      "employee": "陳湘婷",
-      "start": "18:00",
-      "end": "09:00",
-      "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-27",
-      "monthKey": "2026-06",
-      "day": 27,
-      "weekday": "六",
-      "employee": "許暐妮",
-      "start": "09:00",
-      "end": "18:00",
-      "hours": 9,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-27",
-      "monthKey": "2026-06",
-      "day": 27,
-      "weekday": "六",
-      "employee": "陳湘婷",
-      "start": "18:00",
-      "end": "09:00",
-      "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-28",
-      "monthKey": "2026-06",
-      "day": 28,
-      "weekday": "日",
-      "employee": "邱永承",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "ㄧ二固定休 三 五六日都可排",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-28",
-      "monthKey": "2026-06",
-      "day": 28,
-      "weekday": "日",
-      "employee": "許暐妮",
-      "start": "09:00",
-      "end": "18:00",
-      "hours": 9,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-28",
-      "monthKey": "2026-06",
-      "day": 28,
-      "weekday": "日",
-      "employee": "潘奕勤",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "周一晚班 二五固定休 週三四中班晚班 六日皆可排班",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-28",
-      "monthKey": "2026-06",
-      "day": 28,
-      "weekday": "日",
-      "employee": "蔡淨馨",
-      "start": "14:30",
-      "end": "23:30",
-      "hours": 9,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-29",
-      "monthKey": "2026-06",
-      "day": 29,
-      "weekday": "一",
-      "employee": "吳",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "吳 佳蓁 休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-29",
-      "monthKey": "2026-06",
-      "day": 29,
-      "weekday": "一",
-      "employee": "邱永承",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "邱永承 休 休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-29",
-      "monthKey": "2026-06",
-      "day": 29,
-      "weekday": "一",
-      "employee": "范鈺偉",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "范鈺偉 休 休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-29",
-      "monthKey": "2026-06",
-      "day": 29,
-      "weekday": "一",
-      "employee": "蔡岱倪",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "蔡岱倪 休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-29",
-      "monthKey": "2026-06",
-      "day": 29,
-      "weekday": "一",
-      "employee": "Bei",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "Bei 休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-30",
-      "monthKey": "2026-06",
-      "day": 30,
-      "weekday": "二",
-      "employee": "吳",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-30",
-      "monthKey": "2026-06",
-      "day": 30,
-      "weekday": "二",
-      "employee": "邱永承",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "ㄧ二固定休 三 五六日都可排",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-30",
-      "monthKey": "2026-06",
-      "day": 30,
-      "weekday": "二",
-      "employee": "許暐妮",
-      "start": "18:00",
-      "end": "08:00",
-      "hours": 0,
-      "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-30",
-      "monthKey": "2026-06",
-      "day": 30,
-      "weekday": "二",
-      "employee": "陳湘婷",
-      "start": "18:00",
-      "end": "08:00",
-      "hours": 0,
-      "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-30",
-      "monthKey": "2026-06",
-      "day": 30,
-      "weekday": "二",
-      "employee": "潘奕勤",
-      "start": "23:30",
-      "end": "05:00",
-      "hours": 0,
-      "status": "work",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-30",
-      "monthKey": "2026-06",
-      "day": 30,
-      "weekday": "二",
-      "employee": "蔡淨馨",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-06-30",
-      "monthKey": "2026-06",
-      "day": 30,
-      "weekday": "二",
-      "employee": "Bei",
-      "start": "20:00",
-      "end": "08:00",
-      "hours": 0,
-      "status": "work",
-      "note": "",
-      "sheet": "PDF 第 1 頁"
+      "sheet": "工作表1"
     }
   ],
   "employees": [
     {
       "name": "Bei",
       "role": "",
-      "shifts": 13,
-      "hours": 21
-    },
-    {
-      "name": "工作",
-      "role": "",
-      "shifts": 0,
-      "hours": 0
+      "shifts": 17,
+      "hours": 27
     },
     {
       "name": "許暐妮",
       "role": "",
-      "shifts": 16,
-      "hours": 75.5
+      "shifts": 22,
+      "hours": 27
     },
     {
       "name": "陳湘婷",
       "role": "",
-      "shifts": 16,
-      "hours": 27
+      "shifts": 22,
+      "hours": 36
     },
     {
-      "name": "吳",
+      "name": "吳佳蓁",
       "role": "",
-      "shifts": 10,
-      "hours": 7
+      "shifts": 17,
+      "hours": 26
     },
     {
       "name": "潘奕勤",
       "role": "",
-      "shifts": 8,
-      "hours": 27.5
+      "shifts": 18,
+      "hours": 24
     },
     {
       "name": "邱永承",
       "role": "",
-      "shifts": 5,
-      "hours": 14
+      "shifts": 10,
+      "hours": 24
     },
     {
       "name": "林奕廷",
       "role": "",
-      "shifts": 5,
-      "hours": 10.5
+      "shifts": 7,
+      "hours": 6
     },
     {
       "name": "范鈺偉",
       "role": "",
-      "shifts": 11,
-      "hours": 75.5
+      "shifts": 13,
+      "hours": 36
     },
     {
       "name": "蔡淨馨",
       "role": "",
-      "shifts": 13,
-      "hours": 72
+      "shifts": 24,
+      "hours": 36
     },
     {
       "name": "蔡岱倪",
       "role": "",
-      "shifts": 11,
-      "hours": 25.5
-    },
-    {
-      "name": "/1補",
-      "role": "",
-      "shifts": 0,
-      "hours": 0
-    },
-    {
-      "name": "休備",
-      "role": "",
-      "shifts": 0,
-      "hours": 0
+      "shifts": 14,
+      "hours": 52
     }
   ],
-  "dayNotes": {},
-  "warnings": [
-    "PDF 解析依文字位置推估欄位；若匯出結果不準，建議優先上傳 Excel。"
-  ]
+  "dayNotes": {
+    "2026-06-02": "店內會議教育訓練",
+    "2026-06-03": "象棋卜卦公益活動",
+    "2026-06-04": "流心之畫",
+    "2026-06-05": "微醺之夜",
+    "2026-06-06": "DJ party",
+    "2026-06-10": "流心之畫",
+    "2026-06-12": "微醺之夜",
+    "2026-06-19": "粽夏甜食",
+    "2026-06-20": "粽夏甜食",
+    "2026-06-21": "粽夏甜食"
+  },
+  "warnings": []
 }
