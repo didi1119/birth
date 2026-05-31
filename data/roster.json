@@ -1,7 +1,7 @@
 {
   "version": 1,
   "sourceName": "2026 6 月班表.xlsx",
-  "publishedAt": "2026-05-31T07:25:45.439Z",
+  "publishedAt": "2026-05-31T08:24:54.028Z",
   "shifts": [
     {
       "date": "2026-06-01",
@@ -1127,11 +1127,11 @@
       "day": 10,
       "weekday": "三",
       "employee": "吳佳蓁",
-      "start": "",
-      "end": "",
+      "start": "09:00",
+      "end": "05:30",
       "hours": 0,
-      "status": "off",
-      "note": "流心之畫 / 休",
+      "status": "work",
+      "note": "流心之畫",
       "sheet": "工作表1"
     },
     {
@@ -1179,11 +1179,11 @@
       "day": 10,
       "weekday": "三",
       "employee": "許暐妮",
-      "start": "09:00",
-      "end": "08:00",
+      "start": "",
+      "end": "",
       "hours": 0,
-      "status": "work",
-      "note": "流心之畫 / 工作坊",
+      "status": "off",
+      "note": "流心之畫 / 休",
       "sheet": "工作表1"
     },
     {
@@ -1244,11 +1244,11 @@
       "day": 11,
       "weekday": "四",
       "employee": "吳佳蓁",
-      "start": "09:00",
-      "end": "05:30",
+      "start": "",
+      "end": "",
       "hours": 0,
-      "status": "work",
-      "note": "",
+      "status": "off",
+      "note": "休",
       "sheet": "工作表1"
     },
     {
@@ -3524,7 +3524,7 @@
     {
       "name": "許暐妮",
       "role": "",
-      "shifts": 22,
+      "shifts": 21,
       "hours": 27
     },
     {
