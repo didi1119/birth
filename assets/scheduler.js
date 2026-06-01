@@ -382,12 +382,14 @@ async function parseWorkbook(file) {
 
   workbook.SheetNames.forEach((sheetName) => {
     const sheet = workbook.Sheets[sheetName];
-    const rows = XLSX.utils.sheet_to_json(sheet, { header: 1, raw: false, defval: "" });
-    parseGridRows(rows, {
+    const displayRows = XLSX.utils.sheet_to_json(sheet, { header: 1, raw: false, defval: "" });
+    const rawRows = XLSX.utils.sheet_to_json(sheet, { header: 1, raw: true, defval: "" });
+    parseGridRows(displayRows, {
       sheetName,
       year: findYear(sheetName) || year,
       sheetMonth: findSheetMonth(sheetName),
       source: "excel",
+      rawRows,
     });
   });
 }
@@ -455,6 +457,7 @@ function parseGridRows(rows, context) {
 
     for (let rowIndex = dateRow.rowIndex + 1; rowIndex < nextDateRowIndex; rowIndex += 1) {
       const row = rows[rowIndex] || [];
+      const rawRow = context.rawRows?.[rowIndex] || row;
       const employee = normalizeName(row[0]);
       if (!employee || !looksLikeEmployee(employee)) continue;
       captureEmployeeMeta(employee, row);
@@ -464,7 +467,8 @@ function parseGridRows(rows, context) {
       } else {
         dates.forEach((day) => {
           const cells = row.slice(day.startColumn, day.endColumn);
-          addShiftFromCells(employee, day, cells, context);
+          const rawCells = rawRow.slice(day.startColumn, day.endColumn);
+          addShiftFromCells(employee, day, cells, context, rawCells);
         });
       }
     }
@@ -531,20 +535,20 @@ function consumeShiftTokens(tokens) {
   return { cells: [first], count: 1 };
 }
 
-function addShiftFromCells(employee, day, cells, context) {
+function addShiftFromCells(employee, day, cells, context, rawCells = cells) {
   const values = cells.map(clean).filter(Boolean);
   const meaningful = values.filter((value) => value !== "-");
   if (!meaningful.length) return;
 
   const text = meaningful.join(" ");
-  const times = values.filter(isTimeToken).map(Number);
+  const times = getShiftTimes(rawCells, cells);
   const isOff = offWords.test(text);
   const isWork = times.length >= 2 && !/^[休公店補請特]+$/.test(text);
   if (!isWork && !isOff) return;
 
-  const start = isWork ? formatHour(times[0]) : "";
-  const end = isWork ? formatHour(times[times.length - 1]) : "";
-  const hours = isWork ? roundHours(times[times.length - 1] - times[0]) : 0;
+  const start = isWork ? formatHour(times[0].value) : "";
+  const end = isWork ? formatHour(times[1].value) : "";
+  const hours = isWork ? getShiftHours(rawCells, times[0], times[1]) : 0;
   const note = [day.note, sanitizeShiftNote(text)]
     .filter(Boolean)
     .join(" / ");
@@ -1045,9 +1049,52 @@ function looksLikeEmployee(value) {
 
 function isTimeToken(value) {
   const text = clean(value);
-  if (!/^\d{1,2}(\.\d+)?$/.test(text)) return false;
+  return parseTimeToken(text) !== null;
+}
+
+function parseTimeToken(value) {
+  const text = clean(value);
+  const clock = text.match(/^(\d{1,2}):(\d{2})(?:\s*(AM|PM|上午|下午))?$/i);
+  if (clock) {
+    let hours = Number(clock[1]);
+    const minutes = Number(clock[2]);
+    if (hours > 36 || minutes > 59) return null;
+    const period = clock[3]?.toUpperCase();
+    if ((period === "PM" || period === "下午") && hours < 12) hours += 12;
+    if ((period === "AM" || period === "上午") && hours === 12) hours = 0;
+    return hours + minutes / 60;
+  }
+  if (!/^\d{1,2}(\.\d+)?$/.test(text)) return null;
   const number = Number(text);
-  return number >= 5 && number <= 24;
+  if (number > 0 && number < 1) return number * 24;
+  return number >= 5 && number <= 36 ? number : null;
+}
+
+function getShiftTimes(rawCells, displayCells) {
+  const parseCells = (cells) => cells
+    .map((value, index) => ({ index, value: parseTimeToken(value) }))
+    .filter((entry) => entry.value !== null)
+    .slice(0, 2);
+  const rawTimes = parseCells(rawCells);
+  return rawTimes.length >= 2 ? rawTimes : parseCells(displayCells);
+}
+
+function getShiftHours(rawCells, start, end) {
+  const elapsed = end.value >= start.value
+    ? end.value - start.value
+    : end.value + 24 - start.value;
+  const trailingDurations = rawCells
+    .slice(end.index + 1)
+    .map(parseDurationToken)
+    .filter((value) => value !== null && value <= elapsed);
+  return roundHours(trailingDurations.at(-1) ?? elapsed);
+}
+
+function parseDurationToken(value) {
+  const text = clean(value);
+  if (!/^\d{1,2}(\.\d+)?$/.test(text)) return null;
+  const number = Number(text);
+  return number >= 0 && number <= 24 ? number : null;
 }
 
 function formatHour(value) {
@@ -1075,8 +1122,10 @@ function findSheetMonth(text) {
 
 function sanitizeShiftNote(text) {
   return clean(text)
+    .replace(/\b\d{1,2}:\d{2}\b/g, "")
     .replace(/\b\d+(\.\d+)?\b/g, "")
     .replaceAll("-", "")
+    .replace(/[:：]+/g, " ")
     .replace(/[\/｜|]+/g, " ")
     .replace(/\s+/g, " ")
     .trim();
