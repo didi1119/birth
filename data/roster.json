@@ -1,7 +1,7 @@
 {
   "version": 1,
   "sourceName": "6月班表.xlsx",
-  "publishedAt": "2026-06-02T05:46:41.275Z",
+  "publishedAt": "2026-06-11T14:09:26.746Z",
   "shifts": [
     {
       "date": "2026-06-01",
@@ -1271,8 +1271,8 @@
       "weekday": "四",
       "employee": "邱永承",
       "start": "18:30",
-      "end": "23:30",
-      "hours": 4.5,
+      "end": "23:00",
+      "hours": 4,
       "status": "work",
       "note": "流心之畫",
       "sheet": "工作表1"
@@ -1310,8 +1310,8 @@
       "weekday": "四",
       "employee": "潘奕勤",
       "start": "17:30",
-      "end": "23:30",
-      "hours": 5.5,
+      "end": "23:00",
+      "hours": 5,
       "status": "work",
       "note": "流心之畫",
       "sheet": "工作表1"
@@ -1440,8 +1440,8 @@
       "weekday": "五",
       "employee": "潘奕勤",
       "start": "19:30",
-      "end": "24:30",
-      "hours": 4.5,
+      "end": "23:00",
+      "hours": 3.5,
       "status": "work",
       "note": "微醺之夜",
       "sheet": "工作表1"
@@ -1465,8 +1465,8 @@
       "day": 12,
       "weekday": "五",
       "employee": "蔡淨馨",
-      "start": "15:30",
-      "end": "24:30",
+      "start": "14:00",
+      "end": "23:00",
       "hours": 8,
       "status": "work",
       "note": "微醺之夜",
@@ -2388,9 +2388,9 @@
       "day": 20,
       "weekday": "六",
       "employee": "林奕廷",
-      "start": "18:00",
+      "start": "17:30",
       "end": "23:00",
-      "hours": 4.5,
+      "hours": 5,
       "status": "work",
       "note": "粽夏甜食",
       "sheet": "工作表1"
@@ -2479,9 +2479,9 @@
       "day": 20,
       "weekday": "六",
       "employee": "蔡淨馨",
-      "start": "14:24",
+      "start": "14:30",
       "end": "23:30",
-      "hours": 8.1,
+      "hours": 8,
       "status": "work",
       "note": "粽夏甜食",
       "sheet": "工作表1"
@@ -3415,9 +3415,9 @@
       "day": 28,
       "weekday": "日",
       "employee": "潘奕勤",
-      "start": "15:30",
-      "end": "23:30",
-      "hours": 8,
+      "start": "11:30",
+      "end": "20:30",
+      "hours": 9,
       "status": "work",
       "note": "",
       "sheet": "工作表1"
@@ -3738,19 +3738,19 @@
       "name": "潘奕勤",
       "role": "",
       "shifts": 18,
-      "hours": 107.5
+      "hours": 107
     },
     {
       "name": "邱永承",
       "role": "",
       "shifts": 9,
-      "hours": 55.5
+      "hours": 55
     },
     {
       "name": "林奕廷",
       "role": "",
       "shifts": 12,
-      "hours": 58.5
+      "hours": 59
     },
     {
       "name": "范鈺偉",
@@ -3762,7 +3762,7 @@
       "name": "蔡淨馨",
       "role": "",
       "shifts": 22,
-      "hours": 180.1
+      "hours": 180
     },
     {
       "name": "蔡岱倪",
