@@ -433,8 +433,7 @@ function parseGridRows(rows, context) {
   const dateRows = [];
   rows.forEach((row, index) => {
     const dateCells = getDateCells(row);
-    const hasMonthLead = /月/.test(clean(row[0] || ""));
-    if (dateCells.length >= 2 || (hasMonthLead && dateCells.length >= 1)) {
+    if (isDateHeaderRow(row, dateCells)) {
       dateRows.push({ rowIndex: index, dateCells });
     }
   });
@@ -442,11 +441,13 @@ function parseGridRows(rows, context) {
   dateRows.forEach((dateRow, dateRowIndex) => {
     const nextDateRowIndex = dateRows[dateRowIndex + 1]?.rowIndex ?? rows.length;
     const compactPdfRow = context.source === "pdf" && isCompactDateRow(dateRow.dateCells);
+    const defaultDateSpan = inferDateSpan(dateRow.dateCells);
     const dates = dateRow.dateCells.map((cell, index) => parseDateHeader(cell, {
       year: context.year,
       monthOverride: context.sheetMonth,
       fallbackColumn: cell.column,
       nextColumn: dateRow.dateCells[index + 1]?.column,
+      defaultDateSpan,
       compactPdfRow,
       index,
     })).filter(Boolean);
@@ -481,9 +482,27 @@ function getDateCells(row) {
     .filter((cell) => datePattern.test(cell.value));
 }
 
+function isDateHeaderRow(row, dateCells) {
+  const lead = clean(row[0] || "");
+  const leadEmployee = normalizeName(lead);
+  if (leadEmployee && looksLikeEmployee(leadEmployee)) return false;
+  if (/月/.test(lead) && dateCells.length >= 1) return true;
+  if (dateCells.length >= 3) return true;
+  if (dateCells.length < 2) return false;
+  return dateCells[1].column - dateCells[0].column <= 10;
+}
+
 function isCompactDateRow(dateCells) {
   if (dateCells.length < 2) return false;
   return dateCells.every((cell, index) => index === 0 || cell.column - dateCells[index - 1].column <= 2);
+}
+
+function inferDateSpan(dateCells) {
+  const gaps = dateCells
+    .slice(1)
+    .map((cell, index) => cell.column - dateCells[index].column)
+    .filter((gap) => gap > 0);
+  return gaps.length ? Math.max(3, Math.min(...gaps)) : 3;
 }
 
 function parseDateHeader(cell, options) {
@@ -509,7 +528,7 @@ function parseDateHeader(cell, options) {
     label,
     note,
     startColumn: options.compactPdfRow ? options.index + 1 : cell.column,
-    endColumn: options.compactPdfRow ? options.index + 2 : (options.nextColumn ?? cell.column + 3),
+    endColumn: options.compactPdfRow ? options.index + 2 : (options.nextColumn ?? cell.column + options.defaultDateSpan),
   };
 }
 
