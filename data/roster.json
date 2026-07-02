@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceName": "Birth-2026班表 - 7月.pdf",
-  "publishedAt": "2026-07-02T12:25:38.638Z",
+  "sourceName": "Birth-2026班表 - 7月 (1).pdf",
+  "publishedAt": "2026-07-02T12:27:32.194Z",
   "shifts": [
     {
       "date": "2026-07-01",
@@ -27,19 +27,6 @@
       "hours": 0,
       "status": "off",
       "note": "吳 佳蓁 休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-07-01",
-      "monthKey": "2026-07",
-      "day": 1,
-      "weekday": "三",
-      "employee": "邱永承",
-      "start": "17:00",
-      "end": "21:00",
-      "hours": 4,
-      "status": "work",
-      "note": "邱永承",
       "sheet": "PDF 第 1 頁"
     },
     {
@@ -157,19 +144,6 @@
       "hours": 0,
       "status": "off",
       "note": "休 休",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-07-02",
-      "monthKey": "2026-07",
-      "day": 2,
-      "weekday": "四",
-      "employee": "邱永承",
-      "start": "17:00",
-      "end": "21:00",
-      "hours": 4,
-      "status": "work",
-      "note": "",
       "sheet": "PDF 第 1 頁"
     },
     {
@@ -365,19 +339,6 @@
       "hours": 3.5,
       "status": "work",
       "note": "",
-      "sheet": "PDF 第 1 頁"
-    },
-    {
-      "date": "2026-07-04",
-      "monthKey": "2026-07",
-      "day": 4,
-      "weekday": "六",
-      "employee": "邱永承",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "二四固定休 週三要後 一下午可排 五六日都可排",
       "sheet": "PDF 第 1 頁"
     },
     {
@@ -3121,12 +3082,6 @@
       "role": "",
       "shifts": 18,
       "hours": 134
-    },
-    {
-      "name": "邱永承",
-      "role": "",
-      "shifts": 2,
-      "hours": 8
     },
     {
       "name": "范鈺偉",
