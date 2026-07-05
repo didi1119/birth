@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceName": "7月班表.xlsx",
-  "publishedAt": "2026-07-02T12:31:59.994Z",
+  "sourceName": "7月班表_新.xlsx",
+  "publishedAt": "2026-07-05T17:14:05.686Z",
   "shifts": [
     {
       "date": "2026-07-01",
@@ -282,11 +282,11 @@
       "day": 3,
       "weekday": "五",
       "employee": "蔡岱倪",
-      "start": "15:30",
-      "end": "20:30",
-      "hours": 4.5,
-      "status": "work",
-      "note": "",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
       "sheet": "工作表1"
     },
     {
@@ -803,8 +803,8 @@
       "weekday": "三",
       "employee": "蔡岱倪",
       "start": "09:00",
-      "end": "18:00",
-      "hours": 8,
+      "end": "12:00",
+      "hours": 3,
       "status": "work",
       "note": "",
       "sheet": "工作表1"
@@ -3280,8 +3280,8 @@
     {
       "name": "蔡岱倪",
       "role": "",
-      "shifts": 15,
-      "hours": 92.5
+      "shifts": 14,
+      "hours": 83
     }
   ],
   "dayNotes": {
