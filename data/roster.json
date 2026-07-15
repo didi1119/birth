@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceName": "7月班表_新.xlsx",
-  "publishedAt": "2026-07-05T17:14:05.686Z",
+  "sourceName": "2026_7月班表-7_15更新.xlsx",
+  "publishedAt": "2026-07-15T11:17:12.378Z",
   "shifts": [
     {
       "date": "2026-07-01",
@@ -996,19 +996,6 @@
       "monthKey": "2026-07",
       "day": 10,
       "weekday": "五",
-      "employee": "潘奕勤",
-      "start": "17:00",
-      "end": "21:00",
-      "hours": 4,
-      "status": "work",
-      "note": "",
-      "sheet": "工作表1"
-    },
-    {
-      "date": "2026-07-10",
-      "monthKey": "2026-07",
-      "day": 10,
-      "weekday": "五",
       "employee": "蔡岱倪",
       "start": "",
       "end": "",
@@ -1048,25 +1035,12 @@
       "monthKey": "2026-07",
       "day": 11,
       "weekday": "六",
-      "employee": "吳佳蓁",
-      "start": "09:00",
-      "end": "15:00",
-      "hours": 5.5,
-      "status": "work",
-      "note": "下午包場",
-      "sheet": "工作表1"
-    },
-    {
-      "date": "2026-07-11",
-      "monthKey": "2026-07",
-      "day": 11,
-      "weekday": "六",
       "employee": "范鈺偉",
       "start": "",
       "end": "",
       "hours": 0,
       "status": "off",
-      "note": "下午包場 / 休",
+      "note": "下午包場颱風假 / 休",
       "sheet": "工作表1"
     },
     {
@@ -1079,7 +1053,7 @@
       "end": "21:00",
       "hours": 8,
       "status": "work",
-      "note": "下午包場",
+      "note": "下午包場颱風假 / 颱風假",
       "sheet": "工作表1"
     },
     {
@@ -1092,33 +1066,7 @@
       "end": "18:00",
       "hours": 8,
       "status": "work",
-      "note": "下午包場",
-      "sheet": "工作表1"
-    },
-    {
-      "date": "2026-07-11",
-      "monthKey": "2026-07",
-      "day": 11,
-      "weekday": "六",
-      "employee": "潘奕勤",
-      "start": "15:00",
-      "end": "22:00",
-      "hours": 6.5,
-      "status": "work",
-      "note": "下午包場",
-      "sheet": "工作表1"
-    },
-    {
-      "date": "2026-07-11",
-      "monthKey": "2026-07",
-      "day": 11,
-      "weekday": "六",
-      "employee": "蔡岱倪",
-      "start": "09:30",
-      "end": "15:30",
-      "hours": 5.5,
-      "status": "work",
-      "note": "下午包場",
+      "note": "下午包場颱風假 / 颱風假",
       "sheet": "工作表1"
     },
     {
@@ -1131,7 +1079,7 @@
       "end": "22:00",
       "hours": 8,
       "status": "work",
-      "note": "下午包場",
+      "note": "下午包場颱風假 / 颱風假",
       "sheet": "工作表1"
     },
     {
@@ -1144,7 +1092,7 @@
       "end": "21:00",
       "hours": 8,
       "status": "work",
-      "note": "下午包場",
+      "note": "下午包場颱風假 / 颱風假",
       "sheet": "工作表1"
     },
     {
@@ -1569,11 +1517,11 @@
       "day": 16,
       "weekday": "四",
       "employee": "吳佳蓁",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "休",
+      "start": "09:00",
+      "end": "15:00",
+      "hours": 5.5,
+      "status": "work",
+      "note": "",
       "sheet": "工作表1"
     },
     {
@@ -1595,11 +1543,11 @@
       "day": 16,
       "weekday": "四",
       "employee": "許暐妮",
-      "start": "09:00",
-      "end": "18:00",
-      "hours": 8,
-      "status": "work",
-      "note": "",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
       "sheet": "工作表1"
     },
     {
@@ -1634,9 +1582,9 @@
       "day": 16,
       "weekday": "四",
       "employee": "蔡岱倪",
-      "start": "15:30",
-      "end": "20:30",
-      "hours": 4.5,
+      "start": "09:30",
+      "end": "18:30",
+      "hours": 8,
       "status": "work",
       "note": "",
       "sheet": "工作表1"
@@ -1686,8 +1634,8 @@
       "day": 17,
       "weekday": "五",
       "employee": "范鈺偉",
-      "start": "11:00",
-      "end": "20:00",
+      "start": "13:00",
+      "end": "22:00",
       "hours": 8,
       "status": "work",
       "note": "",
@@ -1738,11 +1686,11 @@
       "day": 17,
       "weekday": "五",
       "employee": "蔡岱倪",
-      "start": "",
-      "end": "",
-      "hours": 0,
-      "status": "off",
-      "note": "休",
+      "start": "18:00",
+      "end": "22:00",
+      "hours": 4,
+      "status": "work",
+      "note": "",
       "sheet": "工作表1"
     },
     {
@@ -1907,11 +1855,11 @@
       "day": 19,
       "weekday": "日",
       "employee": "許暐妮",
-      "start": "12:00",
-      "end": "21:00",
-      "hours": 8,
-      "status": "work",
-      "note": "下午慶生包場",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "下午慶生包場 / 休",
       "sheet": "工作表1"
     },
     {
@@ -3238,8 +3186,8 @@
     {
       "name": "許暐妮",
       "role": "",
-      "shifts": 22,
-      "hours": 176
+      "shifts": 20,
+      "hours": 160
     },
     {
       "name": "陳湘婷",
@@ -3256,8 +3204,8 @@
     {
       "name": "潘奕勤",
       "role": "",
-      "shifts": 18,
-      "hours": 80
+      "shifts": 16,
+      "hours": 69.5
     },
     {
       "name": "邱永承",
@@ -3281,12 +3229,12 @@
       "name": "蔡岱倪",
       "role": "",
       "shifts": 14,
-      "hours": 83
+      "hours": 85
     }
   ],
   "dayNotes": {
     "2026-07-09": "象棋卜卦",
-    "2026-07-11": "下午包場",
+    "2026-07-11": "下午包場颱風假",
     "2026-07-18": "趣叢林活動",
     "2026-07-19": "下午慶生包場"
   },
