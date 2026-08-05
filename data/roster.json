@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceName": "8月班表-8_3更新.xlsx",
-  "publishedAt": "2026-08-03T05:08:35.565Z",
+  "sourceName": "8月班表-8_5更新.xlsx",
+  "publishedAt": "2026-08-05T06:28:14.549Z",
   "shifts": [
     {
       "date": "2026-08-01",
@@ -828,11 +828,11 @@
       "day": 10,
       "weekday": "一",
       "employee": "吳佳蓁",
-      "start": "10:00",
-      "end": "16:00",
-      "hours": 5.5,
-      "status": "work",
-      "note": "晚上包場",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "晚上包場 / 休",
       "sheet": "工作表1"
     },
     {
@@ -880,9 +880,9 @@
       "day": 10,
       "weekday": "一",
       "employee": "蔡岱倪",
-      "start": "16:30",
+      "start": "13:30",
       "end": "22:30",
-      "hours": 5.5,
+      "hours": 8,
       "status": "work",
       "note": "晚上包場",
       "sheet": "工作表1"
@@ -2853,8 +2853,8 @@
     {
       "name": "吳佳蓁",
       "role": "",
-      "shifts": 24,
-      "hours": 143.5
+      "shifts": 23,
+      "hours": 138
     },
     {
       "name": "潘奕勤",
@@ -2866,7 +2866,7 @@
       "name": "蔡岱倪",
       "role": "",
       "shifts": 16,
-      "hours": 118
+      "hours": 120.5
     }
   ],
   "dayNotes": {
