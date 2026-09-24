@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceName": "2026年9月班表 9_6更新.xlsx",
-  "publishedAt": "2026-09-06T07:19:44.184Z",
+  "sourceName": "9月班表 9_24更新.xlsx",
+  "publishedAt": "2026-09-24T09:02:50.115Z",
   "shifts": [
     {
       "date": "2026-09-01",
@@ -2103,8 +2103,8 @@
       "weekday": "三",
       "employee": "蔡岱倪",
       "start": "12:30",
-      "end": "18:30",
-      "hours": 5.5,
+      "end": "18:00",
+      "hours": 5,
       "status": "work",
       "note": "店內烤肉 象棋卜卦",
       "sheet": "工作表1"
@@ -2350,8 +2350,8 @@
       "weekday": "六",
       "employee": "邱永承",
       "start": "11:00",
-      "end": "20:00",
-      "hours": 8,
+      "end": "18:00",
+      "hours": 6.5,
       "status": "work",
       "note": "試營運活動",
       "sheet": "工作表1"
@@ -2389,8 +2389,8 @@
       "weekday": "六",
       "employee": "蔡岱倪",
       "start": "11:00",
-      "end": "20:00",
-      "hours": 8,
+      "end": "18:00",
+      "hours": 6.5,
       "status": "work",
       "note": "試營運活動",
       "sheet": "工作表1"
@@ -2401,8 +2401,8 @@
       "day": 26,
       "weekday": "六",
       "employee": "蔡淨馨",
-      "start": "11:00",
-      "end": "20:00",
+      "start": "09:00",
+      "end": "18:00",
       "hours": 8,
       "status": "work",
       "note": "試營運活動",
@@ -2440,11 +2440,11 @@
       "day": 27,
       "weekday": "日",
       "employee": "邱永承",
-      "start": "13:00",
-      "end": "20:00",
+      "start": "11:00",
+      "end": "18:00",
       "hours": 6.5,
       "status": "work",
-      "note": "試營運活動",
+      "note": "試營運活動 / 事假",
       "sheet": "工作表1"
     },
     {
@@ -2453,8 +2453,8 @@
       "day": 27,
       "weekday": "日",
       "employee": "范鈺偉",
-      "start": "11:00",
-      "end": "20:00",
+      "start": "09:00",
+      "end": "18:00",
       "hours": 8,
       "status": "work",
       "note": "試營運活動 / 遠端",
@@ -2466,9 +2466,9 @@
       "day": 27,
       "weekday": "日",
       "employee": "陳湘婷",
-      "start": "13:00",
-      "end": "19:00",
-      "hours": 5.5,
+      "start": "11:00",
+      "end": "18:00",
+      "hours": 6.5,
       "status": "work",
       "note": "試營運活動",
       "sheet": "工作表1"
@@ -2479,8 +2479,8 @@
       "day": 27,
       "weekday": "日",
       "employee": "蔡岱倪",
-      "start": "13:00",
-      "end": "20:00",
+      "start": "11:00",
+      "end": "18:00",
       "hours": 6.5,
       "status": "work",
       "note": "試營運活動",
@@ -2492,8 +2492,8 @@
       "day": 27,
       "weekday": "日",
       "employee": "蔡淨馨",
-      "start": "11:00",
-      "end": "20:00",
+      "start": "09:00",
+      "end": "18:00",
       "hours": 8,
       "status": "work",
       "note": "試營運活動",
@@ -2810,7 +2810,7 @@
       "name": "陳湘婷",
       "role": "",
       "shifts": 16,
-      "hours": 100.5
+      "hours": 101.5
     },
     {
       "name": "吳佳蓁",
@@ -2828,7 +2828,7 @@
       "name": "邱永承",
       "role": "",
       "shifts": 12,
-      "hours": 80.5
+      "hours": 79
     },
     {
       "name": "范鈺偉",
@@ -2846,7 +2846,7 @@
       "name": "蔡岱倪",
       "role": "",
       "shifts": 17,
-      "hours": 100
+      "hours": 98
     },
     {
       "name": "劉羽純",
