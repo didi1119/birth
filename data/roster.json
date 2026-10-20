@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceName": "10月班表 10_18更新.xlsx",
-  "publishedAt": "2026-10-18T03:35:46.020Z",
+  "sourceName": "10月班表 10_20更新.xlsx",
+  "publishedAt": "2026-10-20T10:28:50.535Z",
   "shifts": [
     {
       "date": "2026-10-01",
@@ -673,8 +673,8 @@
       "weekday": "五",
       "employee": "蔡岱倪",
       "start": "19:00",
-      "end": "22:00",
-      "hours": 3,
+      "end": "21:30",
+      "hours": 2.5,
       "status": "work",
       "note": "活動試營運",
       "sheet": "工作表1"
@@ -788,12 +788,77 @@
       "monthKey": "2026-10",
       "day": 11,
       "weekday": "日",
+      "employee": "吳佳蓁",
+      "start": "13:00",
+      "end": "19:00",
+      "hours": 5.5,
+      "status": "work",
+      "note": "活動試營運",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-11",
+      "monthKey": "2026-10",
+      "day": 11,
+      "weekday": "日",
+      "employee": "邱永承",
+      "start": "13:00",
+      "end": "19:00",
+      "hours": 5.5,
+      "status": "work",
+      "note": "活動試營運",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-11",
+      "monthKey": "2026-10",
+      "day": 11,
+      "weekday": "日",
+      "employee": "范鈺偉",
+      "start": "10:00",
+      "end": "19:00",
+      "hours": 8,
+      "status": "work",
+      "note": "活動試營運",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-11",
+      "monthKey": "2026-10",
+      "day": 11,
+      "weekday": "日",
       "employee": "蔡岱倪",
       "start": "",
       "end": "",
       "hours": 0,
       "status": "off",
       "note": "活動試營運 / 休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-11",
+      "monthKey": "2026-10",
+      "day": 11,
+      "weekday": "日",
+      "employee": "蔡淨馨",
+      "start": "10:00",
+      "end": "19:00",
+      "hours": 8,
+      "status": "work",
+      "note": "活動試營運",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-11",
+      "monthKey": "2026-10",
+      "day": 11,
+      "weekday": "日",
+      "employee": "Bei",
+      "start": "10:00",
+      "end": "19:00",
+      "hours": 8,
+      "status": "work",
+      "note": "活動試營運",
       "sheet": "工作表1"
     },
     {
@@ -1330,6 +1395,19 @@
       "sheet": "工作表1"
     },
     {
+      "date": "2026-10-18",
+      "monthKey": "2026-10",
+      "day": 18,
+      "weekday": "日",
+      "employee": "Bei",
+      "start": "10:00",
+      "end": "19:00",
+      "hours": 8,
+      "status": "work",
+      "note": "大掃除",
+      "sheet": "工作表1"
+    },
+    {
       "date": "2026-10-19",
       "monthKey": "2026-10",
       "day": 19,
@@ -1418,6 +1496,19 @@
       "hours": 0,
       "status": "off",
       "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-20",
+      "monthKey": "2026-10",
+      "day": 20,
+      "weekday": "二",
+      "employee": "邱馨慧",
+      "start": "10:00",
+      "end": "19:00",
+      "hours": 8,
+      "status": "work",
+      "note": "報到",
       "sheet": "工作表1"
     },
     {
@@ -1483,6 +1574,19 @@
       "hours": 0,
       "status": "off",
       "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-21",
+      "monthKey": "2026-10",
+      "day": 21,
+      "weekday": "三",
+      "employee": "邱馨慧",
+      "start": "10:00",
+      "end": "19:00",
+      "hours": 8,
+      "status": "work",
+      "note": "",
       "sheet": "工作表1"
     },
     {
@@ -1546,6 +1650,19 @@
       "start": "10:00",
       "end": "16:00",
       "hours": 5.5,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-22",
+      "monthKey": "2026-10",
+      "day": 22,
+      "weekday": "四",
+      "employee": "邱馨慧",
+      "start": "10:00",
+      "end": "19:00",
+      "hours": 8,
       "status": "work",
       "note": "",
       "sheet": "工作表1"
@@ -1611,6 +1728,19 @@
       "start": "19:00",
       "end": "22:00",
       "hours": 3,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-23",
+      "monthKey": "2026-10",
+      "day": 23,
+      "weekday": "五",
+      "employee": "邱馨慧",
+      "start": "12:00",
+      "end": "21:00",
+      "hours": 8,
       "status": "work",
       "note": "",
       "sheet": "工作表1"
@@ -1685,6 +1815,19 @@
       "monthKey": "2026-10",
       "day": 24,
       "weekday": "六",
+      "employee": "邱馨慧",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-24",
+      "monthKey": "2026-10",
+      "day": 24,
+      "weekday": "六",
       "employee": "范鈺偉",
       "start": "12:00",
       "end": "21:00",
@@ -1737,6 +1880,19 @@
       "monthKey": "2026-10",
       "day": 25,
       "weekday": "日",
+      "employee": "邱馨慧",
+      "start": "10:00",
+      "end": "19:00",
+      "hours": 8,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-25",
+      "monthKey": "2026-10",
+      "day": 25,
+      "weekday": "日",
       "employee": "范鈺偉",
       "start": "10:00",
       "end": "19:00",
@@ -1777,6 +1933,19 @@
       "day": 26,
       "weekday": "一",
       "employee": "邱永承",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-26",
+      "monthKey": "2026-10",
+      "day": 26,
+      "weekday": "一",
+      "employee": "邱馨慧",
       "start": "",
       "end": "",
       "hours": 0,
@@ -1829,6 +1998,19 @@
       "day": 27,
       "weekday": "二",
       "employee": "邱永承",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-27",
+      "monthKey": "2026-10",
+      "day": 27,
+      "weekday": "二",
+      "employee": "邱馨慧",
       "start": "",
       "end": "",
       "hours": 0,
@@ -1881,6 +2063,19 @@
       "day": 28,
       "weekday": "三",
       "employee": "邱永承",
+      "start": "",
+      "end": "",
+      "hours": 0,
+      "status": "off",
+      "note": "休",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-28",
+      "monthKey": "2026-10",
+      "day": 28,
+      "weekday": "三",
+      "employee": "邱馨慧",
       "start": "",
       "end": "",
       "hours": 0,
@@ -1936,6 +2131,19 @@
       "start": "13:00",
       "end": "19:00",
       "hours": 5.5,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-29",
+      "monthKey": "2026-10",
+      "day": 29,
+      "weekday": "四",
+      "employee": "邱馨慧",
+      "start": "10:00",
+      "end": "19:00",
+      "hours": 8,
       "status": "work",
       "note": "",
       "sheet": "工作表1"
@@ -1997,6 +2205,19 @@
       "monthKey": "2026-10",
       "day": 30,
       "weekday": "五",
+      "employee": "邱馨慧",
+      "start": "12:00",
+      "end": "21:00",
+      "hours": 8,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-30",
+      "monthKey": "2026-10",
+      "day": 30,
+      "weekday": "五",
       "employee": "范鈺偉",
       "start": "12:00",
       "end": "21:00",
@@ -2049,6 +2270,19 @@
       "monthKey": "2026-10",
       "day": 31,
       "weekday": "六",
+      "employee": "邱馨慧",
+      "start": "12:00",
+      "end": "21:00",
+      "hours": 9,
+      "status": "work",
+      "note": "",
+      "sheet": "工作表1"
+    },
+    {
+      "date": "2026-10-31",
+      "monthKey": "2026-10",
+      "day": 31,
+      "weekday": "六",
       "employee": "范鈺偉",
       "start": "12:00",
       "end": "21:00",
@@ -2088,44 +2322,50 @@
     {
       "name": "Bei",
       "role": "",
-      "shifts": 21,
-      "hours": 168
+      "shifts": 23,
+      "hours": 184
     },
     {
       "name": "蔡淨馨",
       "role": "",
-      "shifts": 21,
-      "hours": 160
+      "shifts": 22,
+      "hours": 168
     },
     {
       "name": "范鈺偉",
       "role": "",
-      "shifts": 22,
-      "hours": 176
+      "shifts": 23,
+      "hours": 184
     },
     {
       "name": "吳佳蓁",
       "role": "",
-      "shifts": 16,
-      "hours": 81.5
+      "shifts": 17,
+      "hours": 87
     },
     {
       "name": "邱永承",
       "role": "",
-      "shifts": 14,
-      "hours": 80
+      "shifts": 15,
+      "hours": 85.5
     },
     {
       "name": "蔡岱倪",
       "role": "",
       "shifts": 9,
-      "hours": 43
+      "hours": 42.5
     },
     {
       "name": "潘奕勤",
       "role": "",
       "shifts": 0,
       "hours": 0
+    },
+    {
+      "name": "邱馨慧",
+      "role": "",
+      "shifts": 8,
+      "hours": 65
     }
   ],
   "dayNotes": {
