@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "sourceName": "11月班表1030更新.xlsx",
-  "publishedAt": "2026-10-30T05:46:34.729Z",
+  "sourceName": "11月班表1030更新 (1).xlsx",
+  "publishedAt": "2026-11-01T09:10:47.470Z",
   "shifts": [
     {
       "date": "2026-11-01",
@@ -204,9 +204,9 @@
       "day": 4,
       "weekday": "三",
       "employee": "邱永承",
-      "start": "10:00",
+      "start": "16:00",
       "end": "19:00",
-      "hours": 8,
+      "hours": 3,
       "status": "work",
       "note": "店內會議",
       "sheet": "工作表1"
@@ -1114,9 +1114,9 @@
       "day": 18,
       "weekday": "三",
       "employee": "邱永承",
-      "start": "10:00",
+      "start": "16:00",
       "end": "19:00",
-      "hours": 9,
+      "hours": 3,
       "status": "work",
       "note": "店內會議",
       "sheet": "工作表1"
@@ -2048,7 +2048,7 @@
       "name": "邱永承",
       "role": "",
       "shifts": 17,
-      "hours": 101.5
+      "hours": 90.5
     }
   ],
   "dayNotes": {
